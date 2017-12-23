@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hey Underscore, You&#39;re doing it Wrong! (介紹函數編程) | 閃閃發光的地下城筆記</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Curried Function：到拿到所有需要的參數前… 一直回傳新函數的函數。  var add = function(x) {   return function(y) {     return x + y;   } }  var add3 = add(3); add3(4); //return 7  add(3)(4); //weird thing   autoCurry in Wu">
+<meta name="keywords" content="functional programming,composition,currying,functors">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hey Underscore, You&#39;re doing it Wrong! (介紹函數編程)">
+<meta property="og:url" content="http://yoursite.com/2016/01/28/Hey-Underscore-You-re-doing-it-Wrong-介紹函數編程/index.html">
+<meta property="og:site_name" content="閃閃發光的地下城筆記">
+<meta property="og:description" content="Curried Function：到拿到所有需要的參數前… 一直回傳新函數的函數。  var add = function(x) {   return function(y) {     return x + y;   } }  var add3 = add(3); add3(4); //return 7  add(3)(4); //weird thing   autoCurry in Wu">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2017-12-23T06:08:08.298Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hey Underscore, You&#39;re doing it Wrong! (介紹函數編程)">
+<meta name="twitter:description" content="Curried Function：到拿到所有需要的參數前… 一直回傳新函數的函數。  var add = function(x) {   return function(y) {     return x + y;   } }  var add3 = add(3); add3(4); //return 7  add(3)(4); //weird thing   autoCurry in Wu">
+<meta name="twitter:creator" content="@kindalu">
+  
+    <link rel="alternate" href="/atom.xml" title="閃閃發光的地下城筆記" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">閃閃發光的地下城筆記</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="https://github.com/wangchou">Github</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Hey-Underscore-You-re-doing-it-Wrong-介紹函數編程" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/01/28/Hey-Underscore-You-re-doing-it-Wrong-介紹函數編程/" class="article-date">
+  <time datetime="2016-01-28T14:05:00.000Z" itemprop="datePublished">2016-01-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Hey Underscore, You&#39;re doing it Wrong! (介紹函數編程)
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id=""><a href="#" class="headerlink" title="   "></a><div class="separator" style="clear: both; text-align: center;">  <iframe allowfullscreen class="YOUTUBE-iframe-video" data-thumbnail-src="https://i.ytimg.com/vi/m3svKOdZijA/0.jpg" frameborder="0" height="266" src="https://www.youtube.com/embed/m3svKOdZijA?feature=player_embedded" width="320"></iframe></div> <pre></pre></h2><p>Curried Function：到拿到所有需要的參數前… 一直回傳新函數的函數。</p>
+<pre style="background-color: rgba(0,0,0,0.1); padding: 10px;">
+var add = function(x) {
+  return function(y) {
+    return x + y;
+  }
+}
+
+var add3 = add(3);
+add3(4); //return 7
+
+add(3)(4); //weird thing 
+</pre> autoCurry in Wu.js will save us <pre style="background-color: rgba(0,0,0,0.1); padding: 10px;">
+var add = function(x, y) {
+  return x + y;
+}.autoCurry();
+
+var add3 = add(3);
+add3(4) //7
+
+add(3,5) //8 => not weird any more!!!
+</pre> 但我們為什麼需要 curry？參考下面這個組成新 function getTheOdds 的例子。 有了currying，我們可以透過給予不同參數來建立新的函數。 <pre style="background-color: rgba(0,0,0,0.1); padding: 10px;">
+var filter = function(f, xs) {
+  return xs.filter(f);
+}
+
+filter(isOdd, [1,2,3,4,5]) // [1,3,5]
+
+var getTheOdds = filter(isOdd);
+getTheOdds([1,2,3,4,5]) //[1,3,5]
+</pre> 再來一個用loadash的酷例子 <pre style="background-color: rgba(0,0,0,0.1); padding: 10px;">
+//沒用currying、不函數化的寫法
+var firstTwoLetters = function(words){
+  return _.map(words, function(word){
+    return _.first(word, 2);
+  });
+}
+
+//函數化的寫法(如果underscore吃參數的方式是反過來的話)
+var firstTwoLetters = _.map(_.first(2));
+
+//更函數化的寫法
+_.map(_.first(2), ['jim', 'kate']) //['ji', 'ka'] 
+</pre> => Underscore.js的參數排列法讓currying變得不可能  總結currying的優點有下面四個： 1\. 一般化函數、要傳的變數名消失了 2\. 透過給不同參數就可以生成不同的函數 3\. 更簡潔的定義 4\. 讓函式的組合/合成 (composition) 變的可能  ---------------------------------------------------------- 組合/合成 (composition):用多個函數來組成新函數  簡單的例子，用 first() 和 reverse() 來合成 last 函數 <pre style="background-color: rgba(100,100,0,0.1); padding: 10px;">
+var last = function(xs) {
+  var sx = reverse(xs);
+  return first(sx);
+}
+
+var last = compose(first, reverse);
+
+last([1,2,3]) //3
+</pre> 另一個例子，chain backwardly <pre style="background-color: rgba(100,100,0,0.1); padding: 10px;">
+var wordCount = function(str){
+  var words = split(' ', str);
+  return length(words);
+}
+
+var wordCount = compose(length, split(' '));
+wordCount("There is a way to save the world") //8
+</pre> Category Theory: 多個函數組合(compose)，作用域互相對應的理論。Connecting the dot.  總結組合： 1\. 能從其他函數組成新函數 2\. 組合過程中把參數藏起來 3\. 極為高階的寫程式 4\. 有數學理論在後面支持  ------------------------------------------------------------------ Functors  map 打開了後面的 object 然後做一些事、再放回 object <pre style="background-color: rgba(0,100,100,0.1); padding: 10px;">
+var plus1 = function(x){ return x + 1 }
+
+plus1([3]) //wrong!!
+
+map(plus1, [3]) //4
+</pre> 剛剛舉的例子，map 只能操作 array object、但下面試圖用 map 操作所有 object <pre style="background-color: rgba(0,100,100,0.1); padding: 10px;">
+map(plus1, MyObject(3)) //MyObject(4)
+
+MyObject = function(val) {
+  this.val = val;
+}
+
+MyObject.prototype.map = function(f) {
+  return MyObject(f(this.val));
+}
+</pre> 如果對 object 定義了 map function，它就變成 functor null check的例子、Dynamic Safety： <pre style="background-color: rgba(0,100,100,0.1); padding: 10px;">
+map(plus1, Maybe(3)) //=> Maybe(4)
+
+map(plus1, Maybe(null)) //=> Maybe(null)
+
+Maybe = function(val) {
+  this.val = val;
+}
+
+Maybe.prototype.map = function(f){
+  return this.val ? Maybe(f(this.val)) : Maybe(null);
+}
+</pre> 把 ES6 promise 變 functor 的例子 <pre style="background-color: rgba(0,100,100,0.1); padding: 10px;">
+map(populateTable, $.ajax.get('/posts');
+
+Promise.prototype.map = function(f) {
+  var promise = new Promise();
+  this.then(function(response){
+    promise.resolve(f(response));
+  });
+  return promise;
+}
+</pre> 再來一個和 html 合作的例子：對有和沒有 user_login 的情況下，更新歡迎頁面。 <pre style="background-color: rgba(0,100,100,0.1); padding: 10px;">
+$div = $("#myDiv");
+
+//dot 會把 user.name 拿出來
+var getGreeting = compose(concat('Welcome '), dot('name'));
+
+var updateGreetingHtml = compose($div.html, getGreeting);
+
+map(updateGreetingHtml, Maybe(App.current_user));
+</pre> underscore 不讓人 extend map  總結 functor 能: 1\. 改變函數的行為卻不用變動 open/closed principle 2\. 不光只有 map, 還有 reduce & compose 3\. 直覺且非私人的 api 4\. free formulas 5\. 動態型別安全/檢查  ------------------------------------------------------------- 總結：underscore 能變得更加 functional。希望有更 functional 的 library 
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/01/28/Hey-Underscore-You-re-doing-it-Wrong-介紹函數編程/" data-id="cjbiy30070003gt9k5n2hixgx" class="article-share-link">Teilen</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/composition/">composition</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/currying/">currying</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/functional-programming/">functional programming</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/functors/">functors</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/01/29/淺談函數式編程和-React/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Neuer</strong>
+      <div class="article-nav-title">
+        
+          淺談函數式編程和 React
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/01/01/什麼是設計？/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">什麼是設計？</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/IA/" style="font-size: 13.33px;">IA</a> <a href="/tags/MobX/" style="font-size: 10px;">MobX</a> <a href="/tags/Model/" style="font-size: 10px;">Model</a> <a href="/tags/System-Thinking/" style="font-size: 10px;">System Thinking</a> <a href="/tags/UCD/" style="font-size: 10px;">UCD</a> <a href="/tags/agile/" style="font-size: 10px;">agile</a> <a href="/tags/attention/" style="font-size: 10px;">attention</a> <a href="/tags/baas/" style="font-size: 10px;">baas</a> <a href="/tags/backend/" style="font-size: 13.33px;">backend</a> <a href="/tags/coding/" style="font-size: 10px;">coding</a> <a href="/tags/cognitive-psychology/" style="font-size: 10px;">cognitive psychology</a> <a href="/tags/composition/" style="font-size: 13.33px;">composition</a> <a href="/tags/currying/" style="font-size: 13.33px;">currying</a> <a href="/tags/design/" style="font-size: 20px;">design</a> <a href="/tags/design-thinking/" style="font-size: 10px;">design thinking</a> <a href="/tags/designer/" style="font-size: 10px;">designer</a> <a href="/tags/empathy/" style="font-size: 10px;">empathy</a> <a href="/tags/engineering/" style="font-size: 10px;">engineering</a> <a href="/tags/event-system/" style="font-size: 10px;">event system</a> <a href="/tags/express/" style="font-size: 10px;">express</a> <a href="/tags/facebook/" style="font-size: 10px;">facebook</a> <a href="/tags/firebase/" style="font-size: 13.33px;">firebase</a> <a href="/tags/flux/" style="font-size: 10px;">flux</a> <a href="/tags/framer/" style="font-size: 10px;">framer</a> <a href="/tags/frontend/" style="font-size: 10px;">frontend</a> <a href="/tags/functional-programming/" style="font-size: 20px;">functional programming</a> <a href="/tags/functors/" style="font-size: 10px;">functors</a> <a href="/tags/hackathon/" style="font-size: 10px;">hackathon</a> <a href="/tags/information/" style="font-size: 10px;">information</a> <a href="/tags/information-architecture/" style="font-size: 10px;">information architecture</a> <a href="/tags/interaction-design/" style="font-size: 10px;">interaction design</a> <a href="/tags/node/" style="font-size: 13.33px;">node</a> <a href="/tags/one-way-data-flow/" style="font-size: 10px;">one way data flow</a> <a href="/tags/oop/" style="font-size: 10px;">oop</a> <a href="/tags/prototyping/" style="font-size: 10px;">prototyping</a> <a href="/tags/psychology/" style="font-size: 10px;">psychology</a> <a href="/tags/pure-function/" style="font-size: 13.33px;">pure function</a> <a href="/tags/react/" style="font-size: 20px;">react</a> <a href="/tags/redux/" style="font-size: 16.67px;">redux</a> <a href="/tags/refactoring/" style="font-size: 10px;">refactoring</a> <a href="/tags/separation-of-concerns/" style="font-size: 10px;">separation of concerns</a> <a href="/tags/sociology/" style="font-size: 10px;">sociology</a> <a href="/tags/state-machine/" style="font-size: 13.33px;">state machine</a> <a href="/tags/ui/" style="font-size: 10px;">ui</a> <a href="/tags/user-story-mapping/" style="font-size: 10px;">user story mapping</a> <a href="/tags/ux/" style="font-size: 16.67px;">ux</a> <a href="/tags/vivid-dream/" style="font-size: 10px;">vivid dream</a> <a href="/tags/yahoo/" style="font-size: 10px;">yahoo</a> <a href="/tags/社會學/" style="font-size: 10px;">社會學</a> <a href="/tags/老子/" style="font-size: 10px;">老子</a>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 kindalu<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="https://github.com/wangchou" class="mobile-nav-link">Github</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
