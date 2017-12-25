@@ -7,18 +7,18 @@
   
   <title>Hey Underscore, You&#39;re doing it Wrong! (介紹函數編程) | 閃閃發光的地下城筆記</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Curried Function：到拿到所有需要的參數前… 一直回傳新函數的函數。  var add = function(x) {   return function(y) {     return x + y;   } }  var add3 = add(3); add3(4); //return 7  add(3)(4); //weird thing   autoCurry in Wu">
+  <meta name="description" content="Curried Function：到拿到所有需要的參數前… 一直回傳新函數的函數。123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828">
 <meta name="keywords" content="functional programming,composition,currying,functors">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hey Underscore, You&#39;re doing it Wrong! (介紹函數編程)">
 <meta property="og:url" content="http://yoursite.com/2016/01/28/Hey-Underscore-You-re-doing-it-Wrong-介紹函數編程/index.html">
 <meta property="og:site_name" content="閃閃發光的地下城筆記">
-<meta property="og:description" content="Curried Function：到拿到所有需要的參數前… 一直回傳新函數的函數。  var add = function(x) {   return function(y) {     return x + y;   } }  var add3 = add(3); add3(4); //return 7  add(3)(4); //weird thing   autoCurry in Wu">
+<meta property="og:description" content="Curried Function：到拿到所有需要的參數前… 一直回傳新函數的函數。123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-12-23T06:08:08.298Z">
+<meta property="og:updated_time" content="2017-12-25T02:19:53.075Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hey Underscore, You&#39;re doing it Wrong! (介紹函數編程)">
-<meta name="twitter:description" content="Curried Function：到拿到所有需要的參數前… 一直回傳新函數的函數。  var add = function(x) {   return function(y) {     return x + y;   } }  var add3 = add(3); add3(4); //return 7  add(3)(4); //weird thing   autoCurry in Wu">
+<meta name="twitter:description" content="Curried Function：到拿到所有需要的參數前… 一直回傳新函數的函數。123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828">
 <meta name="twitter:creator" content="@kindalu">
   
     <link rel="alternate" href="/atom.xml" title="閃閃發光的地下城筆記" type="application/atom+xml">
@@ -90,118 +90,69 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id=""><a href="#" class="headerlink" title="   "></a><div class="separator" style="clear: both; text-align: center;">  <iframe allowfullscreen class="YOUTUBE-iframe-video" data-thumbnail-src="https://i.ytimg.com/vi/m3svKOdZijA/0.jpg" frameborder="0" height="266" src="https://www.youtube.com/embed/m3svKOdZijA?feature=player_embedded" width="320"></iframe></div> <pre></pre></h2><p>Curried Function：到拿到所有需要的參數前… 一直回傳新函數的函數。</p>
-<pre style="background-color: rgba(0,0,0,0.1); padding: 10px;">
-var add = function(x) {
-  return function(y) {
-    return x + y;
-  }
+        <iframe allowfullscreen class="YOUTUBE-iframe-video" data-thumbnail-src="https://i.ytimg.com/vi/m3svKOdZijA/0.jpg" frameborder="0" height="266" src="https://www.youtube.com/embed/m3svKOdZijA?feature=player_embedded" width="320"></iframe>
+
+<hr>
+<p>Curried Function：到拿到所有需要的參數前… 一直回傳新函數的函數。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> add = <span class="function"><span class="keyword">function</span>(<span class="params">x</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">y</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> x + y;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> add3 = add(<span class="number">3</span>);</span><br><span class="line">add3(<span class="number">4</span>); <span class="comment">//return 7</span></span><br><span class="line"></span><br><span class="line">add(<span class="number">3</span>)(<span class="number">4</span>); <span class="comment">//weird thing </span></span><br><span class="line"><span class="string">``</span><span class="string">` </span></span><br><span class="line"><span class="string">autoCurry in Wu.js will save us </span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>js</span><br><span class="line"><span class="keyword">var</span> add = <span class="function"><span class="keyword">function</span>(<span class="params">x, y</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> x + y;</span><br><span class="line">&#125;.autoCurry();</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> add3 = add(<span class="number">3</span>);</span><br><span class="line">add3(<span class="number">4</span>) <span class="comment">//7</span></span><br><span class="line"></span><br><span class="line">add(<span class="number">3</span>,<span class="number">5</span>) <span class="comment">//8 =&gt; not weird any more!!!</span></span><br><span class="line"><span class="string">``</span><span class="string">` </span></span><br><span class="line"><span class="string">但我們為什麼需要 curry？參考下面這個組成新 function getTheOdds 的例子。 有了currying，我們可以透過給予不同參數來建立新的函數。 </span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>js</span><br><span class="line"><span class="keyword">var</span> filter = <span class="function"><span class="keyword">function</span>(<span class="params">f, xs</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> xs.filter(f);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">filter(isOdd, [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]) <span class="comment">// [1,3,5]</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> getTheOdds = filter(isOdd);</span><br><span class="line">getTheOdds([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]) <span class="comment">//[1,3,5]</span></span><br><span class="line"><span class="string">``</span><span class="string">` </span></span><br><span class="line"><span class="string">再來一個用loadash的酷例子 </span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>js</span><br><span class="line"><span class="comment">//沒用currying、不函數化的寫法</span></span><br><span class="line"><span class="keyword">var</span> firstTwoLetters = <span class="function"><span class="keyword">function</span>(<span class="params">words</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> _.map(words, <span class="function"><span class="keyword">function</span>(<span class="params">word</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> _.first(word, <span class="number">2</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//函數化的寫法(如果underscore吃參數的方式是反過來的話)</span></span><br><span class="line"><span class="keyword">var</span> firstTwoLetters = _.map(_.first(<span class="number">2</span>));</span><br><span class="line"></span><br><span class="line"><span class="comment">//更函數化的寫法</span></span><br><span class="line">_.map(_.first(<span class="number">2</span>), [<span class="string">'jim'</span>, <span class="string">'kate'</span>]) <span class="comment">//['ji', 'ka'] </span></span><br><span class="line"><span class="string">``</span><span class="string">` </span></span><br><span class="line"><span class="string">=&gt; Underscore.js的參數排列法讓currying變得不可能  總結currying的優點有下面四個： </span></span><br><span class="line"><span class="string">* 一般化函數、要傳的變數名消失了 </span></span><br><span class="line"><span class="string">* 透過給不同參數就可以生成不同的函數 </span></span><br><span class="line"><span class="string">* 更簡潔的定義 </span></span><br><span class="line"><span class="string">* 讓函式的組合/合成 (composition) 變的可能  </span></span><br><span class="line"><span class="string">---------------------------------------------------------- </span></span><br><span class="line"><span class="string">組合/合成 (composition):用多個函數來組成新函數  簡單的例子，用 first() 和 reverse() 來合成 last 函數 </span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>js</span><br><span class="line"><span class="keyword">var</span> last = <span class="function"><span class="keyword">function</span>(<span class="params">xs</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> sx = reverse(xs);</span><br><span class="line">  <span class="keyword">return</span> first(sx);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> last = compose(first, reverse);</span><br><span class="line"></span><br><span class="line">last([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]) <span class="comment">//3</span></span><br><span class="line"><span class="string">``</span><span class="string">` </span></span><br><span class="line"><span class="string">另一個例子，chain backwardly </span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>js</span><br><span class="line"><span class="keyword">var</span> wordCount = <span class="function"><span class="keyword">function</span>(<span class="params">str</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> words = split(<span class="string">' '</span>, str);</span><br><span class="line">  <span class="keyword">return</span> length(words);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> wordCount = compose(length, split(<span class="string">' '</span>));</span><br><span class="line">wordCount(<span class="string">"There is a way to save the world"</span>) <span class="comment">//8</span></span><br><span class="line"><span class="string">``</span><span class="string">` </span></span><br><span class="line"><span class="string">**Category Theory:** 多個函數組合(compose)，作用域互相對應的理論。Connecting the dot.  總結組合：</span></span><br><span class="line"><span class="string">* 能從其他函數組成新函數 </span></span><br><span class="line"><span class="string">* 組合過程中把參數藏起來 </span></span><br><span class="line"><span class="string">* 極為高階的寫程式 </span></span><br><span class="line"><span class="string">* 有數學理論在後面支持  </span></span><br><span class="line"><span class="string">------------------------------------------------------------------ </span></span><br><span class="line"><span class="string">Functors  map 打開了後面的 object 然後做一些事、再放回 object </span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>js</span><br><span class="line"><span class="keyword">var</span> plus1 = <span class="function"><span class="keyword">function</span>(<span class="params">x</span>)</span>&#123; <span class="keyword">return</span> x + <span class="number">1</span> &#125;</span><br><span class="line"></span><br><span class="line">plus1([<span class="number">3</span>]) <span class="comment">//wrong!!</span></span><br><span class="line"></span><br><span class="line">map(plus1, [<span class="number">3</span>]) <span class="comment">//4</span></span><br></pre></td></tr></table></figure></p>
+<p>剛剛舉的例子，map 只能操作 array object、但下面試圖用 map 操作所有 object </p>
+<pre><code class="js">map(plus1, MyObject(<span class="number">3</span>)) <span class="comment">//MyObject(4)</span>
+
+MyObject = <span class="function"><span class="keyword">function</span>(<span class="params">val</span>) </span>{
+  <span class="keyword">this</span>.val = val;
 }
 
-var add3 = add(3);
-add3(4); //return 7
+MyObject.prototype.map = <span class="function"><span class="keyword">function</span>(<span class="params">f</span>) </span>{
+  <span class="keyword">return</span> MyObject(f(<span class="keyword">this</span>.val));
+}
+</code></pre>
+<p>如果對 object 定義了 map function，它就變成 functor null check的例子、Dynamic Safety： </p>
+<pre><code class="js">map(plus1, Maybe(<span class="number">3</span>)) <span class="comment">//=&gt; Maybe(4)</span>
 
-add(3)(4); //weird thing 
-</pre> autoCurry in Wu.js will save us <pre style="background-color: rgba(0,0,0,0.1); padding: 10px;">
-var add = function(x, y) {
-  return x + y;
-}.autoCurry();
+map(plus1, Maybe(<span class="literal">null</span>)) <span class="comment">//=&gt; Maybe(null)</span>
 
-var add3 = add(3);
-add3(4) //7
-
-add(3,5) //8 => not weird any more!!!
-</pre> 但我們為什麼需要 curry？參考下面這個組成新 function getTheOdds 的例子。 有了currying，我們可以透過給予不同參數來建立新的函數。 <pre style="background-color: rgba(0,0,0,0.1); padding: 10px;">
-var filter = function(f, xs) {
-  return xs.filter(f);
+Maybe = <span class="function"><span class="keyword">function</span>(<span class="params">val</span>) </span>{
+  <span class="keyword">this</span>.val = val;
 }
 
-filter(isOdd, [1,2,3,4,5]) // [1,3,5]
-
-var getTheOdds = filter(isOdd);
-getTheOdds([1,2,3,4,5]) //[1,3,5]
-</pre> 再來一個用loadash的酷例子 <pre style="background-color: rgba(0,0,0,0.1); padding: 10px;">
-//沒用currying、不函數化的寫法
-var firstTwoLetters = function(words){
-  return _.map(words, function(word){
-    return _.first(word, 2);
-  });
+Maybe.prototype.map = <span class="function"><span class="keyword">function</span>(<span class="params">f</span>)</span>{
+  <span class="keyword">return</span> <span class="keyword">this</span>.val ? Maybe(f(<span class="keyword">this</span>.val)) : Maybe(<span class="literal">null</span>);
 }
+</code></pre>
+<p>把 ES6 promise 變 functor 的例子 </p>
+<pre><code class="js">map(populateTable, $.ajax.get(<span class="string">'/posts'</span>);
 
-//函數化的寫法(如果underscore吃參數的方式是反過來的話)
-var firstTwoLetters = _.map(_.first(2));
-
-//更函數化的寫法
-_.map(_.first(2), ['jim', 'kate']) //['ji', 'ka'] 
-</pre> => Underscore.js的參數排列法讓currying變得不可能  總結currying的優點有下面四個： 1\. 一般化函數、要傳的變數名消失了 2\. 透過給不同參數就可以生成不同的函數 3\. 更簡潔的定義 4\. 讓函式的組合/合成 (composition) 變的可能  ---------------------------------------------------------- 組合/合成 (composition):用多個函數來組成新函數  簡單的例子，用 first() 和 reverse() 來合成 last 函數 <pre style="background-color: rgba(100,100,0,0.1); padding: 10px;">
-var last = function(xs) {
-  var sx = reverse(xs);
-  return first(sx);
-}
-
-var last = compose(first, reverse);
-
-last([1,2,3]) //3
-</pre> 另一個例子，chain backwardly <pre style="background-color: rgba(100,100,0,0.1); padding: 10px;">
-var wordCount = function(str){
-  var words = split(' ', str);
-  return length(words);
-}
-
-var wordCount = compose(length, split(' '));
-wordCount("There is a way to save the world") //8
-</pre> Category Theory: 多個函數組合(compose)，作用域互相對應的理論。Connecting the dot.  總結組合： 1\. 能從其他函數組成新函數 2\. 組合過程中把參數藏起來 3\. 極為高階的寫程式 4\. 有數學理論在後面支持  ------------------------------------------------------------------ Functors  map 打開了後面的 object 然後做一些事、再放回 object <pre style="background-color: rgba(0,100,100,0.1); padding: 10px;">
-var plus1 = function(x){ return x + 1 }
-
-plus1([3]) //wrong!!
-
-map(plus1, [3]) //4
-</pre> 剛剛舉的例子，map 只能操作 array object、但下面試圖用 map 操作所有 object <pre style="background-color: rgba(0,100,100,0.1); padding: 10px;">
-map(plus1, MyObject(3)) //MyObject(4)
-
-MyObject = function(val) {
-  this.val = val;
-}
-
-MyObject.prototype.map = function(f) {
-  return MyObject(f(this.val));
-}
-</pre> 如果對 object 定義了 map function，它就變成 functor null check的例子、Dynamic Safety： <pre style="background-color: rgba(0,100,100,0.1); padding: 10px;">
-map(plus1, Maybe(3)) //=> Maybe(4)
-
-map(plus1, Maybe(null)) //=> Maybe(null)
-
-Maybe = function(val) {
-  this.val = val;
-}
-
-Maybe.prototype.map = function(f){
-  return this.val ? Maybe(f(this.val)) : Maybe(null);
-}
-</pre> 把 ES6 promise 變 functor 的例子 <pre style="background-color: rgba(0,100,100,0.1); padding: 10px;">
-map(populateTable, $.ajax.get('/posts');
-
-Promise.prototype.map = function(f) {
-  var promise = new Promise();
-  this.then(function(response){
+<span class="built_in">Promise</span>.prototype.map = <span class="function"><span class="keyword">function</span>(<span class="params">f</span>) </span>{
+  <span class="keyword">var</span> promise = <span class="keyword">new</span> <span class="built_in">Promise</span>();
+  <span class="keyword">this</span>.then(<span class="function"><span class="keyword">function</span>(<span class="params">response</span>)</span>{
     promise.resolve(f(response));
   });
-  return promise;
+  <span class="keyword">return</span> promise;
 }
-</pre> 再來一個和 html 合作的例子：對有和沒有 user_login 的情況下，更新歡迎頁面。 <pre style="background-color: rgba(0,100,100,0.1); padding: 10px;">
-$div = $("#myDiv");
+</code></pre>
+<p>再來一個和 html 合作的例子：對有和沒有 user_login 的情況下，更新歡迎頁面。 </p>
+<pre><code class="js">$div = $(<span class="string">"#myDiv"</span>);
 
-//dot 會把 user.name 拿出來
-var getGreeting = compose(concat('Welcome '), dot('name'));
+<span class="comment">//dot 會把 user.name 拿出來</span>
+<span class="keyword">var</span> getGreeting = compose(concat(<span class="string">'Welcome '</span>), dot(<span class="string">'name'</span>));
 
-var updateGreetingHtml = compose($div.html, getGreeting);
+<span class="keyword">var</span> updateGreetingHtml = compose($div.html, getGreeting);
 
 map(updateGreetingHtml, Maybe(App.current_user));
-</pre> underscore 不讓人 extend map  總結 functor 能: 1\. 改變函數的行為卻不用變動 open/closed principle 2\. 不光只有 map, 還有 reduce & compose 3\. 直覺且非私人的 api 4\. free formulas 5\. 動態型別安全/檢查  ------------------------------------------------------------- 總結：underscore 能變得更加 functional。希望有更 functional 的 library 
+</code></pre>
+<p>underscore 不讓人 extend map  總結 functor 能: </p>
+<ul>
+<li>改變函數的行為卻不用變動 open/closed principle </li>
+<li>不光只有 map, 還有 reduce &amp; compose *<br>直覺且非私人的 api </li>
+<li>free formulas </li>
+<li>動態型別安全/檢查 </li>
+</ul>
+<hr>
+<p>總結：underscore 能變得更加 functional。希望有更 functional 的 library</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/01/28/Hey-Underscore-You-re-doing-it-Wrong-介紹函數編程/" data-id="cjbiy30070003gt9k5n2hixgx" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2016/01/28/Hey-Underscore-You-re-doing-it-Wrong-介紹函數編程/" data-id="cjblkzcjv0001xq9kxvf5crh9" class="article-share-link">Teilen</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/composition/">composition</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/currying/">currying</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/functional-programming/">functional programming</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/functors/">functors</a></li></ul>
