@@ -18,25 +18,26 @@ ga('send', 'pageview');
 
 
   
-  <title>淺談函數式編程和 React | 宇宙大草原</title>
+  <title>淺談函數式編程和 React | </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="函數是有定義介面的運算單元。 介面有用的地方是抽象化，你只需要知道輸入什麼(Input)、會得到什麼輸出(Output)，你不用知道它細節是怎麼做到的。其實有個超能力在背後，也沒關係。當然這是在沒有碰到 bug 和有良好文件、不需要修改它的前提之下。 再強調一次，你只需要理解輸入(input)會對應到什麼輸出(output)就夠了。 問題來了，怎樣的輸入和輸出的對應「介面」會容易讓人理解？ 有意義">
-<meta name="keywords" content="functional programming,react">
 <meta property="og:type" content="article">
 <meta property="og:title" content="淺談函數式編程和 React">
-<meta property="og:url" content="http://wangchou.github.io/2016/01/29/淺談函數式編程和-React/index.html">
-<meta property="og:site_name" content="宇宙大草原">
+<meta property="og:url" content="http://wangchou.github.io/2016/01/29/%E6%B7%BA%E8%AB%87%E5%87%BD%E6%95%B8%E5%BC%8F%E7%B7%A8%E7%A8%8B%E5%92%8C-React/index.html">
+<meta property="og:site_name">
 <meta property="og:description" content="函數是有定義介面的運算單元。 介面有用的地方是抽象化，你只需要知道輸入什麼(Input)、會得到什麼輸出(Output)，你不用知道它細節是怎麼做到的。其實有個超能力在背後，也沒關係。當然這是在沒有碰到 bug 和有良好文件、不需要修改它的前提之下。 再強調一次，你只需要理解輸入(input)會對應到什麼輸出(output)就夠了。 問題來了，怎樣的輸入和輸出的對應「介面」會容易讓人理解？ 有意義">
-<meta property="og:locale" content="zh-TW">
+<meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="http://2.bp.blogspot.com/-wg5mnU0UosE/VqsbPjd6AfI/AAAAAAAA4Ak/FN1MAFQndCY/s640/unnamed.jpg">
-<meta property="og:updated_time" content="2017-12-25T02:19:53.077Z">
+<meta property="article:published_time" content="2016-01-29T08:08:00.000Z">
+<meta property="article:modified_time" content="2017-12-25T02:19:53.078Z">
+<meta property="article:author" content="kindalu">
+<meta property="article:tag" content="functional programming">
+<meta property="article:tag" content="react">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="淺談函數式編程和 React">
-<meta name="twitter:description" content="函數是有定義介面的運算單元。 介面有用的地方是抽象化，你只需要知道輸入什麼(Input)、會得到什麼輸出(Output)，你不用知道它細節是怎麼做到的。其實有個超能力在背後，也沒關係。當然這是在沒有碰到 bug 和有良好文件、不需要修改它的前提之下。 再強調一次，你只需要理解輸入(input)會對應到什麼輸出(output)就夠了。 問題來了，怎樣的輸入和輸出的對應「介面」會容易讓人理解？ 有意義">
 <meta name="twitter:image" content="http://2.bp.blogspot.com/-wg5mnU0UosE/VqsbPjd6AfI/AAAAAAAA4Ak/FN1MAFQndCY/s640/unnamed.jpg">
 <meta name="twitter:creator" content="@kindalu">
   
-    <link rel="alternate" href="/atom.xml" title="宇宙大草原" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -44,8 +45,10 @@ ga('send', 'pageview');
   
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
-  <link rel="stylesheet" href="/css/style.css">
-</head>
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
   <div id="container">
@@ -55,7 +58,7 @@ ga('send', 'pageview');
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">宇宙大草原</a>
+        <a href="/" id="logo"></a>
       </h1>
       
     </div>
@@ -67,7 +70,7 @@ ga('send', 'pageview');
         
           <a class="main-nav-link" href="/archives">所有文章</a>
         
-          <a class="main-nav-link" href="https://github.com/wangchou">Github</a>
+          <a class="main-nav-link" target="_blank" rel="noopener" href="https://github.com/wangchou">Github</a>
         
       </nav>
       <nav id="sub-nav">
@@ -85,7 +88,7 @@ ga('send', 'pageview');
       <div class="outer">
         <section id="main"><article id="post-淺談函數式編程和-React" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2016/01/29/淺談函數式編程和-React/" class="article-date">
+    <a href="/2016/01/29/%E6%B7%BA%E8%AB%87%E5%87%BD%E6%95%B8%E5%BC%8F%E7%B7%A8%E7%A8%8B%E5%92%8C-React/" class="article-date">
   <time datetime="2016-01-29T08:08:00.000Z" itemprop="datePublished">2016-01-29</time>
 </a>
     
@@ -105,11 +108,12 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>函數是有定義介面的運算單元。<space><space><space><space></space></space></space></space></p>
-<p>介面有用的地方是抽象化，你只需要知道輸入什麼(Input)、會得到什麼輸出(Output)，你不用知道它細節是怎麼做到的。其實有個超能力在背後，也沒關係。當然這是在沒有碰到 bug 和有良好文件、不需要修改它的前提之下。<space><space><space><space></space></space></space></space></p>
-<p>再強調一次，你只需要理解輸入(input)會對應到什麼輸出(output)就夠了。<space><space></space></space></p>
+        <p>函數是有定義介面的運算單元。<space><space><space><space></p>
+<p>介面有用的地方是抽象化，你只需要知道輸入什麼(Input)、會得到什麼輸出(Output)，你不用知道它細節是怎麼做到的。其實有個超能力在背後，也沒關係。當然這是在沒有碰到 bug 和有良好文件、不需要修改它的前提之下。<space><space><space><space></p>
+<p>再強調一次，你只需要理解輸入(input)會對應到什麼輸出(output)就夠了。<space><space></p>
 <h3 id="問題來了，怎樣的輸入和輸出的對應「介面」會容易讓人理解？"><a href="#問題來了，怎樣的輸入和輸出的對應「介面」會容易讓人理解？" class="headerlink" title="問題來了，怎樣的輸入和輸出的對應「介面」會容易讓人理解？"></a><u>問題來了，怎樣的輸入和輸出的對應「介面」會容易讓人理解？</u></h3><ul>
-<li>有意義的函數名稱</li>
+<li><p>有意義的函數名稱</p>
+</li>
 <li><p>多寫沒有副作用的純函數</p>
 <ul>
 <li>有可預測性：<br>   每次輸入得到相同的輸出、函數內部不存狀態    </li>
@@ -150,7 +154,7 @@ ga('send', 'pageview');
 <ul>
 <li>純的 (對資料只做讀的動作)：每個元件中的 render function</li>
 <li>不純的 (對資料做讀和寫的動作)：<br>   flux中對 action 的 callback、redux 中的 reducer、父元件傳給子元件的 callback</li>
-<li>glue code：元件中其他的 javascript<br><img src="http://2.bp.blogspot.com/-wg5mnU0UosE/VqsbPjd6AfI/AAAAAAAA4Ak/FN1MAFQndCY/s640/unnamed.jpg" alt=""></li>
+<li>glue code：元件中其他的 javascript<br><img src="http://2.bp.blogspot.com/-wg5mnU0UosE/VqsbPjd6AfI/AAAAAAAA4Ak/FN1MAFQndCY/s640/unnamed.jpg"></li>
 </ul>
 </li>
 </ul>
@@ -164,7 +168,7 @@ ga('send', 'pageview');
 <li><p>沒有簡單的 currying 語法</p>
 <ul>
 <li>像是傳不同參數給 html5 input 元件，生出各式各樣對數字的、email、submit、text的自定義元件。最簡單寫法應該是 </li>
-<li>export function NumberInput(props) { 角括弧input type=“number” {…props} /&gt; }</li>
+<li>export function NumberInput(props) { 角括弧input type&#x3D;“number” {…props} &#x2F;&gt; }</li>
 <li>PS: function 一定要有名字不然 debug 會很慘。</li>
 </ul>
 </li>
@@ -177,17 +181,17 @@ ga('send', 'pageview');
 </li>
 </ul>
 <hr>
-<p>延伸閱讀：<br><a href="https://segment.com/blog/deku-our-functional-alternative-to-react/" target="_blank" rel="noopener">deku: functional alternative to react </a><br><a href="https://medium.com/@dan_abramov/how-to-use-classes-and-sleep-at-night-9af8de78ccb4#.jkarowg5n" target="_blank" rel="noopener">how to use classes and sleep at night (in a functional way)</a></p>
+<p>延伸閱讀：<br><a target="_blank" rel="noopener" href="https://segment.com/blog/deku-our-functional-alternative-to-react/">deku: functional alternative to react </a><br><a target="_blank" rel="noopener" href="https://medium.com/@dan_abramov/how-to-use-classes-and-sleep-at-night-9af8de78ccb4#.jkarowg5n">how to use classes and sleep at night (in a functional way)</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wangchou.github.io/2016/01/29/淺談函數式編程和-React/" data-id="cjbofxlwr0013ca9kfzp8qsv7" class="article-share-link">分享</a>
+      <a data-url="http://wangchou.github.io/2016/01/29/%E6%B7%BA%E8%AB%87%E5%87%BD%E6%95%B8%E5%BC%8F%E7%B7%A8%E7%A8%8B%E5%92%8C-React/" data-id="cldjvjau100148mz610si5lk7" class="article-share-link">分享</a>
       
-        <a href="http://wangchou.github.io/2016/01/29/淺談函數式編程和-React/#disqus_thread" class="article-comment-link">留言</a>
+        <a href="http://wangchou.github.io/2016/01/29/%E6%B7%BA%E8%AB%87%E5%87%BD%E6%95%B8%E5%BC%8F%E7%B7%A8%E7%A8%8B%E5%92%8C-React/#disqus_thread" class="article-comment-link">留言</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/functional-programming/">functional programming</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react/">react</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/functional-programming/" rel="tag">functional programming</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react/" rel="tag">react</a></li></ul>
 
     </footer>
   </div>
@@ -195,7 +199,7 @@ ga('send', 'pageview');
     
 <nav id="article-nav">
   
-    <a href="/2016/02/08/從買蘋果看工程師和設計師的差別？/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/02/08/%E5%BE%9E%E8%B2%B7%E8%98%8B%E6%9E%9C%E7%9C%8B%E5%B7%A5%E7%A8%8B%E5%B8%AB%E5%92%8C%E8%A8%AD%E8%A8%88%E5%B8%AB%E7%9A%84%E5%B7%AE%E5%88%A5%EF%BC%9F/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
@@ -205,7 +209,7 @@ ga('send', 'pageview');
     </a>
   
   
-    <a href="/2016/01/28/Hey-Underscore-You-re-doing-it-Wrong-介紹函數編程/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2016/01/28/Hey-Underscore-You-re-doing-it-Wrong-%E4%BB%8B%E7%B4%B9%E5%87%BD%E6%95%B8%E7%B7%A8%E7%A8%8B/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
       <div class="article-nav-title">Hey Underscore, You&#39;re doing it Wrong! (介紹函數編程)</div>
     </a>
@@ -218,7 +222,7 @@ ga('send', 'pageview');
 
 <section id="comments">
   <div id="disqus_thread">
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   </div>
 </section>
 </section>
@@ -229,7 +233,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">標籤雲</h3>
     <div class="widget tagcloud">
-      <a href="/tags/ACGN/" style="font-size: 12.5px;">ACGN</a> <a href="/tags/IA/" style="font-size: 15px;">IA</a> <a href="/tags/MobX/" style="font-size: 10px;">MobX</a> <a href="/tags/backend/" style="font-size: 12.5px;">backend</a> <a href="/tags/design/" style="font-size: 20px;">design</a> <a href="/tags/design-thinking/" style="font-size: 10px;">design thinking</a> <a href="/tags/empathy/" style="font-size: 10px;">empathy</a> <a href="/tags/facebook/" style="font-size: 10px;">facebook</a> <a href="/tags/firebase/" style="font-size: 12.5px;">firebase</a> <a href="/tags/flux/" style="font-size: 10px;">flux</a> <a href="/tags/framer/" style="font-size: 10px;">framer</a> <a href="/tags/frontend/" style="font-size: 10px;">frontend</a> <a href="/tags/functional-programming/" style="font-size: 20px;">functional programming</a> <a href="/tags/hackathon/" style="font-size: 10px;">hackathon</a> <a href="/tags/javascript/" style="font-size: 17.5px;">javascript</a> <a href="/tags/node/" style="font-size: 12.5px;">node</a> <a href="/tags/oop/" style="font-size: 10px;">oop</a> <a href="/tags/prototyping/" style="font-size: 10px;">prototyping</a> <a href="/tags/psychology/" style="font-size: 10px;">psychology</a> <a href="/tags/pure-function/" style="font-size: 10px;">pure function</a> <a href="/tags/react/" style="font-size: 20px;">react</a> <a href="/tags/redux/" style="font-size: 17.5px;">redux</a> <a href="/tags/ui/" style="font-size: 10px;">ui</a> <a href="/tags/user-story-mapping/" style="font-size: 10px;">user story mapping</a> <a href="/tags/ux/" style="font-size: 15px;">ux</a> <a href="/tags/劇本/" style="font-size: 10px;">劇本</a> <a href="/tags/生產力/" style="font-size: 10px;">生產力</a> <a href="/tags/社會學/" style="font-size: 10px;">社會學</a> <a href="/tags/老子/" style="font-size: 10px;">老子</a> <a href="/tags/資訊架構/" style="font-size: 10px;">資訊架構</a>
+      <a href="/tags/ACGN/" style="font-size: 12.5px;">ACGN</a> <a href="/tags/IA/" style="font-size: 15px;">IA</a> <a href="/tags/MobX/" style="font-size: 10px;">MobX</a> <a href="/tags/backend/" style="font-size: 12.5px;">backend</a> <a href="/tags/design/" style="font-size: 20px;">design</a> <a href="/tags/design-thinking/" style="font-size: 10px;">design thinking</a> <a href="/tags/empathy/" style="font-size: 10px;">empathy</a> <a href="/tags/facebook/" style="font-size: 10px;">facebook</a> <a href="/tags/firebase/" style="font-size: 12.5px;">firebase</a> <a href="/tags/flux/" style="font-size: 10px;">flux</a> <a href="/tags/framer/" style="font-size: 10px;">framer</a> <a href="/tags/frontend/" style="font-size: 10px;">frontend</a> <a href="/tags/functional-programming/" style="font-size: 20px;">functional programming</a> <a href="/tags/hackathon/" style="font-size: 10px;">hackathon</a> <a href="/tags/javascript/" style="font-size: 17.5px;">javascript</a> <a href="/tags/node/" style="font-size: 12.5px;">node</a> <a href="/tags/oop/" style="font-size: 10px;">oop</a> <a href="/tags/prototyping/" style="font-size: 10px;">prototyping</a> <a href="/tags/psychology/" style="font-size: 10px;">psychology</a> <a href="/tags/pure-function/" style="font-size: 10px;">pure function</a> <a href="/tags/react/" style="font-size: 20px;">react</a> <a href="/tags/redux/" style="font-size: 17.5px;">redux</a> <a href="/tags/ui/" style="font-size: 10px;">ui</a> <a href="/tags/user-story-mapping/" style="font-size: 10px;">user story mapping</a> <a href="/tags/ux/" style="font-size: 15px;">ux</a> <a href="/tags/%E5%8A%87%E6%9C%AC/" style="font-size: 10px;">劇本</a> <a href="/tags/%E7%94%9F%E7%94%A2%E5%8A%9B/" style="font-size: 10px;">生產力</a> <a href="/tags/%E7%A4%BE%E6%9C%83%E5%AD%B8/" style="font-size: 10px;">社會學</a> <a href="/tags/%E8%80%81%E5%AD%90/" style="font-size: 10px;">老子</a> <a href="/tags/%E8%B3%87%E8%A8%8A%E6%9E%B6%E6%A7%8B/" style="font-size: 10px;">資訊架構</a>
     </div>
   </div>
 
@@ -241,7 +245,7 @@ ga('send', 'pageview');
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2018 kindalu<br>
+      &copy; 2023 kindalu<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
@@ -253,14 +257,14 @@ ga('send', 'pageview');
   
     <a href="/archives" class="mobile-nav-link">所有文章</a>
   
-    <a href="https://github.com/wangchou" class="mobile-nav-link">Github</a>
+    <a target="_blank" rel="noopener" href="https://github.com/wangchou" class="mobile-nav-link">Github</a>
   
 </nav>
     
 <script>
   var disqus_shortname = 'vividadada';
   
-  var disqus_url = 'http://wangchou.github.io/2016/01/29/淺談函數式編程和-React/';
+  var disqus_url = 'http://wangchou.github.io/2016/01/29/%E6%B7%BA%E8%AB%87%E5%87%BD%E6%95%B8%E5%BC%8F%E7%B7%A8%E7%A8%8B%E5%92%8C-React/';
   
   (function(){
     var dsq = document.createElement('script');
@@ -275,11 +279,17 @@ ga('send', 'pageview');
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
 
 
 <script src="/js/script.js"></script>
+
 
 
 

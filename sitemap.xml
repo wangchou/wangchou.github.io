@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+
     <sitemap>
         <loc>http://wangchou.github.io/post-sitemap.xml</loc>
         <lastmod>2018-03-07T03:38:15.417Z</lastmod>
@@ -8,7 +9,7 @@
 
     <sitemap>
         <loc>http://wangchou.github.io/tag-sitemap.xml</loc>
-        <lastmod>2017-12-23T06:08:08.299Z</lastmod>
+        <lastmod>2018-03-07T03:38:15.417Z</lastmod>
     </sitemap>
 
 </sitemapindex>

@@ -18,23 +18,23 @@ ga('send', 'pageview');
 
 
   
-  <title>用 Redux 實踐「狀態機導向的介面開發」 | 宇宙大草原</title>
+  <title>用 Redux 實踐「狀態機導向的介面開發」 | </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="BIG WORD ALERT!!!———研究了Redux.js之後，對State Machine有了更深的領悟。上個月解了一百多題 LeetCode，深深覺得程式解問題很重要的一點就是，想出一個「資料的表達的方式」讓問題運算過程中的所有「狀態」能夠清楚的表達，之後只要叫電腦從 Initial State 算到 Final State，題目就解完了。這個「資料表達的方式」也許是 stack、也許是">
-<meta name="keywords" content="redux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="用 Redux 實踐「狀態機導向的介面開發」">
-<meta property="og:url" content="http://wangchou.github.io/2015/11/06/用-Redux-實踐「狀態機導向的介面開發」/index.html">
-<meta property="og:site_name" content="宇宙大草原">
+<meta property="og:url" content="http://wangchou.github.io/2015/11/06/%E7%94%A8-Redux-%E5%AF%A6%E8%B8%90%E3%80%8C%E7%8B%80%E6%85%8B%E6%A9%9F%E5%B0%8E%E5%90%91%E7%9A%84%E4%BB%8B%E9%9D%A2%E9%96%8B%E7%99%BC%E3%80%8D/index.html">
+<meta property="og:site_name">
 <meta property="og:description" content="BIG WORD ALERT!!!———研究了Redux.js之後，對State Machine有了更深的領悟。上個月解了一百多題 LeetCode，深深覺得程式解問題很重要的一點就是，想出一個「資料的表達的方式」讓問題運算過程中的所有「狀態」能夠清楚的表達，之後只要叫電腦從 Initial State 算到 Final State，題目就解完了。這個「資料表達的方式」也許是 stack、也許是">
-<meta property="og:locale" content="zh-TW">
-<meta property="og:updated_time" content="2017-12-27T02:53:17.182Z">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2015-11-06T07:44:00.000Z">
+<meta property="article:modified_time" content="2017-12-27T02:53:17.183Z">
+<meta property="article:author" content="kindalu">
+<meta property="article:tag" content="redux">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="用 Redux 實踐「狀態機導向的介面開發」">
-<meta name="twitter:description" content="BIG WORD ALERT!!!———研究了Redux.js之後，對State Machine有了更深的領悟。上個月解了一百多題 LeetCode，深深覺得程式解問題很重要的一點就是，想出一個「資料的表達的方式」讓問題運算過程中的所有「狀態」能夠清楚的表達，之後只要叫電腦從 Initial State 算到 Final State，題目就解完了。這個「資料表達的方式」也許是 stack、也許是">
 <meta name="twitter:creator" content="@kindalu">
   
-    <link rel="alternate" href="/atom.xml" title="宇宙大草原" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -42,8 +42,10 @@ ga('send', 'pageview');
   
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
-  <link rel="stylesheet" href="/css/style.css">
-</head>
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
   <div id="container">
@@ -53,7 +55,7 @@ ga('send', 'pageview');
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">宇宙大草原</a>
+        <a href="/" id="logo"></a>
       </h1>
       
     </div>
@@ -65,7 +67,7 @@ ga('send', 'pageview');
         
           <a class="main-nav-link" href="/archives">所有文章</a>
         
-          <a class="main-nav-link" href="https://github.com/wangchou">Github</a>
+          <a class="main-nav-link" target="_blank" rel="noopener" href="https://github.com/wangchou">Github</a>
         
       </nav>
       <nav id="sub-nav">
@@ -83,7 +85,7 @@ ga('send', 'pageview');
       <div class="outer">
         <section id="main"><article id="post-用-Redux-實踐「狀態機導向的介面開發」" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/11/06/用-Redux-實踐「狀態機導向的介面開發」/" class="article-date">
+    <a href="/2015/11/06/%E7%94%A8-Redux-%E5%AF%A6%E8%B8%90%E3%80%8C%E7%8B%80%E6%85%8B%E6%A9%9F%E5%B0%8E%E5%90%91%E7%9A%84%E4%BB%8B%E9%9D%A2%E9%96%8B%E7%99%BC%E3%80%8D/" class="article-date">
   <time datetime="2015-11-06T07:44:00.000Z" itemprop="datePublished">2015-11-06</time>
 </a>
     
@@ -103,17 +105,17 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">BIG WORD ALERT!!!</span><br><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">———</span><br><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">研究了Redux.js之後，對State Machine有了更深的領悟。</span><br><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br></span><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">上個月解了一百多題 LeetCode，深深覺得程式解問題很重要的一點就是，想出一個「資料的表達的方式」讓問題運算過程中的所有「狀態」能夠清楚的表達，之後只要叫電腦從 Initial State 算到 Final State，題目就解完了。這個「資料表達的方式」也許是 stack、也許是 Array 再加上兩個 Pointer、也許是 2D Array表達地圖狀態、或複雜一點的像是 八皇后(N-queens) 問題用四個 array 來表達row, column, 兩個斜線方向有沒有皇后。只要想完「怎麼用資料來清楚表達所有狀態？」這個題目就解一半了，如果是 backtracking / 窮舉的問題的話，那你就已經解完了。</span><br><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br></span><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">不過，這個跟 Redux 有什麼關係呢？Redux做為Flux概念的實現，設計中 Store 是唯一的資料儲存中心，它把所有「元件狀態的資料」集中放在一起。</span><span style="font-family: '&quot;helvetica neue&quot;', '&quot;arial&quot;', '&quot;helvetica&quot;', sans-serif;">讓開發者很容易用</span><span style="font-family: 'helvetica neue', arial, helvetica, sans-serif;">抽離 UI 的角度思考，一開始就把應用程式中「0. 怎麼用資料來清楚表達所有邏輯狀態？」這個問題給想清楚。這個問題解完了之後，剩下的只有兩件事：</span><br><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br></span><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">&nbsp;1. 收到使用者 Action 或伺服器的更新，要從哪個 state 換到 哪個 state：應用程式的運作邏輯，這部分 Redux 用 Reducer 做掉了。在 Reducer 中你要清楚定義狀態機中的 Transition 也就是 ( previousState, Action ) =&gt; newState 這件事</span><br><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br></span><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">&nbsp;2. 在每個state的時候，應用程式 / 元件要畫成什麼樣子：React 想解的問題</span><br><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br></span><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">0 和 1 兩個步驟常常會平行設計、互相影響，這部分會定義你的產品功能面。</span><br><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">2 的步驟就是視覺化、資料傳達的部分。</span><br><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br></span><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">—</span><br><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">總結，從State Machine的角度來開發只要做下面三件事：</span><br><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><span class="Apple-tab-span" style="white-space: pre;"> </span>1. 想好怎麼表達 state。 ( Redux Store )</span><br><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><span class="Apple-tab-span" style="white-space: pre;"> </span>2. 想好有哪些事件，事件會讓 state 間怎麼切換。 ( Redux Reducer )</span><br><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><span class="Apple-tab-span" style="white-space: pre;"> </span>3. 如何把狀態傳達給使用者。 ( React )</span><br><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">從此開發就有了 SOP。</span><br><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br></span><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">PS: 「資料的表達方式」包含了「資料結構」和裡面結構中資料代表的意義。</span></p>
+        <p><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">BIG WORD ALERT!!!</span><br><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">———</span><br><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">研究了Redux.js之後，對State Machine有了更深的領悟。</span><br><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br></span><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">上個月解了一百多題 LeetCode，深深覺得程式解問題很重要的一點就是，想出一個「資料的表達的方式」讓問題運算過程中的所有「狀態」能夠清楚的表達，之後只要叫電腦從 Initial State 算到 Final State，題目就解完了。這個「資料表達的方式」也許是 stack、也許是 Array 再加上兩個 Pointer、也許是 2D Array表達地圖狀態、或複雜一點的像是 八皇后(N-queens) 問題用四個 array 來表達row, column, 兩個斜線方向有沒有皇后。只要想完「怎麼用資料來清楚表達所有狀態？」這個題目就解一半了，如果是 backtracking &#x2F; 窮舉的問題的話，那你就已經解完了。</span><br><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br></span><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">不過，這個跟 Redux 有什麼關係呢？Redux做為Flux概念的實現，設計中 Store 是唯一的資料儲存中心，它把所有「元件狀態的資料」集中放在一起。</span><span style="font-family: '&quot;helvetica neue&quot;', '&quot;arial&quot;', '&quot;helvetica&quot;', sans-serif;">讓開發者很容易用</span><span style="font-family: 'helvetica neue', arial, helvetica, sans-serif;">抽離 UI 的角度思考，一開始就把應用程式中「0. 怎麼用資料來清楚表達所有邏輯狀態？」這個問題給想清楚。這個問題解完了之後，剩下的只有兩件事：</span><br><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br></span><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">&amp;nbsp;1. 收到使用者 Action 或伺服器的更新，要從哪個 state 換到 哪個 state：應用程式的運作邏輯，這部分 Redux 用 Reducer 做掉了。在 Reducer 中你要清楚定義狀態機中的 Transition 也就是 ( previousState, Action ) &#x3D;&gt; newState 這件事</span><br><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br></span><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">&amp;nbsp;2. 在每個state的時候，應用程式 &#x2F; 元件要畫成什麼樣子：React 想解的問題</span><br><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br></span><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">0 和 1 兩個步驟常常會平行設計、互相影響，這部分會定義你的產品功能面。</span><br><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">2 的步驟就是視覺化、資料傳達的部分。</span><br><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br></span><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">—</span><br><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">總結，從State Machine的角度來開發只要做下面三件事：</span><br><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><span class="Apple-tab-span" style="white-space: pre;"> </span>1. 想好怎麼表達 state。 ( Redux Store )</span><br><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><span class="Apple-tab-span" style="white-space: pre;"> </span>2. 想好有哪些事件，事件會讓 state 間怎麼切換。 ( Redux Reducer )</span><br><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><span class="Apple-tab-span" style="white-space: pre;"> </span>3. 如何把狀態傳達給使用者。 ( React )</span><br><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">從此開發就有了 SOP。</span><br><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br></span><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">PS: 「資料的表達方式」包含了「資料結構」和裡面結構中資料代表的意義。</span></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wangchou.github.io/2015/11/06/用-Redux-實踐「狀態機導向的介面開發」/" data-id="cjbofxlwv0015ca9knedgx9vv" class="article-share-link">分享</a>
+      <a data-url="http://wangchou.github.io/2015/11/06/%E7%94%A8-Redux-%E5%AF%A6%E8%B8%90%E3%80%8C%E7%8B%80%E6%85%8B%E6%A9%9F%E5%B0%8E%E5%90%91%E7%9A%84%E4%BB%8B%E9%9D%A2%E9%96%8B%E7%99%BC%E3%80%8D/" data-id="cldjvjau100198mz61mscbbiv" class="article-share-link">分享</a>
       
-        <a href="http://wangchou.github.io/2015/11/06/用-Redux-實踐「狀態機導向的介面開發」/#disqus_thread" class="article-comment-link">留言</a>
+        <a href="http://wangchou.github.io/2015/11/06/%E7%94%A8-Redux-%E5%AF%A6%E8%B8%90%E3%80%8C%E7%8B%80%E6%85%8B%E6%A9%9F%E5%B0%8E%E5%90%91%E7%9A%84%E4%BB%8B%E9%9D%A2%E9%96%8B%E7%99%BC%E3%80%8D/#disqus_thread" class="article-comment-link">留言</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/redux/">redux</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/redux/" rel="tag">redux</a></li></ul>
 
     </footer>
   </div>
@@ -121,7 +123,7 @@ ga('send', 'pageview');
     
 <nav id="article-nav">
   
-    <a href="/2015/11/07/訓練英文的閱讀能力/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2015/11/07/%E8%A8%93%E7%B7%B4%E8%8B%B1%E6%96%87%E7%9A%84%E9%96%B1%E8%AE%80%E8%83%BD%E5%8A%9B/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
@@ -131,7 +133,7 @@ ga('send', 'pageview');
     </a>
   
   
-    <a href="/2015/11/05/React-和-Flux-到底在做什麼/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2015/11/05/React-%E5%92%8C-Flux-%E5%88%B0%E5%BA%95%E5%9C%A8%E5%81%9A%E4%BB%80%E9%BA%BC/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
       <div class="article-nav-title">React 和 Flux 到底在做什麼?</div>
     </a>
@@ -144,7 +146,7 @@ ga('send', 'pageview');
 
 <section id="comments">
   <div id="disqus_thread">
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   </div>
 </section>
 </section>
@@ -155,7 +157,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">標籤雲</h3>
     <div class="widget tagcloud">
-      <a href="/tags/ACGN/" style="font-size: 12.5px;">ACGN</a> <a href="/tags/IA/" style="font-size: 15px;">IA</a> <a href="/tags/MobX/" style="font-size: 10px;">MobX</a> <a href="/tags/backend/" style="font-size: 12.5px;">backend</a> <a href="/tags/design/" style="font-size: 20px;">design</a> <a href="/tags/design-thinking/" style="font-size: 10px;">design thinking</a> <a href="/tags/empathy/" style="font-size: 10px;">empathy</a> <a href="/tags/facebook/" style="font-size: 10px;">facebook</a> <a href="/tags/firebase/" style="font-size: 12.5px;">firebase</a> <a href="/tags/flux/" style="font-size: 10px;">flux</a> <a href="/tags/framer/" style="font-size: 10px;">framer</a> <a href="/tags/frontend/" style="font-size: 10px;">frontend</a> <a href="/tags/functional-programming/" style="font-size: 20px;">functional programming</a> <a href="/tags/hackathon/" style="font-size: 10px;">hackathon</a> <a href="/tags/javascript/" style="font-size: 17.5px;">javascript</a> <a href="/tags/node/" style="font-size: 12.5px;">node</a> <a href="/tags/oop/" style="font-size: 10px;">oop</a> <a href="/tags/prototyping/" style="font-size: 10px;">prototyping</a> <a href="/tags/psychology/" style="font-size: 10px;">psychology</a> <a href="/tags/pure-function/" style="font-size: 10px;">pure function</a> <a href="/tags/react/" style="font-size: 20px;">react</a> <a href="/tags/redux/" style="font-size: 17.5px;">redux</a> <a href="/tags/ui/" style="font-size: 10px;">ui</a> <a href="/tags/user-story-mapping/" style="font-size: 10px;">user story mapping</a> <a href="/tags/ux/" style="font-size: 15px;">ux</a> <a href="/tags/劇本/" style="font-size: 10px;">劇本</a> <a href="/tags/生產力/" style="font-size: 10px;">生產力</a> <a href="/tags/社會學/" style="font-size: 10px;">社會學</a> <a href="/tags/老子/" style="font-size: 10px;">老子</a> <a href="/tags/資訊架構/" style="font-size: 10px;">資訊架構</a>
+      <a href="/tags/ACGN/" style="font-size: 12.5px;">ACGN</a> <a href="/tags/IA/" style="font-size: 15px;">IA</a> <a href="/tags/MobX/" style="font-size: 10px;">MobX</a> <a href="/tags/backend/" style="font-size: 12.5px;">backend</a> <a href="/tags/design/" style="font-size: 20px;">design</a> <a href="/tags/design-thinking/" style="font-size: 10px;">design thinking</a> <a href="/tags/empathy/" style="font-size: 10px;">empathy</a> <a href="/tags/facebook/" style="font-size: 10px;">facebook</a> <a href="/tags/firebase/" style="font-size: 12.5px;">firebase</a> <a href="/tags/flux/" style="font-size: 10px;">flux</a> <a href="/tags/framer/" style="font-size: 10px;">framer</a> <a href="/tags/frontend/" style="font-size: 10px;">frontend</a> <a href="/tags/functional-programming/" style="font-size: 20px;">functional programming</a> <a href="/tags/hackathon/" style="font-size: 10px;">hackathon</a> <a href="/tags/javascript/" style="font-size: 17.5px;">javascript</a> <a href="/tags/node/" style="font-size: 12.5px;">node</a> <a href="/tags/oop/" style="font-size: 10px;">oop</a> <a href="/tags/prototyping/" style="font-size: 10px;">prototyping</a> <a href="/tags/psychology/" style="font-size: 10px;">psychology</a> <a href="/tags/pure-function/" style="font-size: 10px;">pure function</a> <a href="/tags/react/" style="font-size: 20px;">react</a> <a href="/tags/redux/" style="font-size: 17.5px;">redux</a> <a href="/tags/ui/" style="font-size: 10px;">ui</a> <a href="/tags/user-story-mapping/" style="font-size: 10px;">user story mapping</a> <a href="/tags/ux/" style="font-size: 15px;">ux</a> <a href="/tags/%E5%8A%87%E6%9C%AC/" style="font-size: 10px;">劇本</a> <a href="/tags/%E7%94%9F%E7%94%A2%E5%8A%9B/" style="font-size: 10px;">生產力</a> <a href="/tags/%E7%A4%BE%E6%9C%83%E5%AD%B8/" style="font-size: 10px;">社會學</a> <a href="/tags/%E8%80%81%E5%AD%90/" style="font-size: 10px;">老子</a> <a href="/tags/%E8%B3%87%E8%A8%8A%E6%9E%B6%E6%A7%8B/" style="font-size: 10px;">資訊架構</a>
     </div>
   </div>
 
@@ -167,7 +169,7 @@ ga('send', 'pageview');
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2018 kindalu<br>
+      &copy; 2023 kindalu<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
@@ -179,14 +181,14 @@ ga('send', 'pageview');
   
     <a href="/archives" class="mobile-nav-link">所有文章</a>
   
-    <a href="https://github.com/wangchou" class="mobile-nav-link">Github</a>
+    <a target="_blank" rel="noopener" href="https://github.com/wangchou" class="mobile-nav-link">Github</a>
   
 </nav>
     
 <script>
   var disqus_shortname = 'vividadada';
   
-  var disqus_url = 'http://wangchou.github.io/2015/11/06/用-Redux-實踐「狀態機導向的介面開發」/';
+  var disqus_url = 'http://wangchou.github.io/2015/11/06/%E7%94%A8-Redux-%E5%AF%A6%E8%B8%90%E3%80%8C%E7%8B%80%E6%85%8B%E6%A9%9F%E5%B0%8E%E5%90%91%E7%9A%84%E4%BB%8B%E9%9D%A2%E9%96%8B%E7%99%BC%E3%80%8D/';
   
   (function(){
     var dsq = document.createElement('script');
@@ -201,11 +203,17 @@ ga('send', 'pageview');
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
 
 
 <script src="/js/script.js"></script>
+
 
 
 

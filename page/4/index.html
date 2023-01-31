@@ -18,18 +18,18 @@ ga('send', 'pageview');
 
 
   
-  <title>宇宙大草原</title>
+  <title></title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
-<meta property="og:title" content="宇宙大草原">
+<meta property="og:title">
 <meta property="og:url" content="http://wangchou.github.io/page/4/index.html">
-<meta property="og:site_name" content="宇宙大草原">
-<meta property="og:locale" content="zh-TW">
+<meta property="og:site_name">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:author" content="kindalu">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="宇宙大草原">
 <meta name="twitter:creator" content="@kindalu">
   
-    <link rel="alternate" href="/atom.xml" title="宇宙大草原" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -37,8 +37,10 @@ ga('send', 'pageview');
   
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
-  <link rel="stylesheet" href="/css/style.css">
-</head>
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
   <div id="container">
@@ -48,7 +50,7 @@ ga('send', 'pageview');
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">宇宙大草原</a>
+        <a href="/" id="logo"></a>
       </h1>
       
     </div>
@@ -60,7 +62,7 @@ ga('send', 'pageview');
         
           <a class="main-nav-link" href="/archives">所有文章</a>
         
-          <a class="main-nav-link" href="https://github.com/wangchou">Github</a>
+          <a class="main-nav-link" target="_blank" rel="noopener" href="https://github.com/wangchou">Github</a>
         
       </nav>
       <nav id="sub-nav">
@@ -80,7 +82,7 @@ ga('send', 'pageview');
   
     <article id="post-研究-Node-js-和-Express-js-有感" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/11/04/研究-Node-js-和-Express-js-有感/" class="article-date">
+    <a href="/2015/11/04/%E7%A0%94%E7%A9%B6-Node-js-%E5%92%8C-Express-js-%E6%9C%89%E6%84%9F/" class="article-date">
   <time datetime="2015-11-04T07:50:00.000Z" itemprop="datePublished">2015-11-04</time>
 </a>
     
@@ -92,7 +94,7 @@ ga('send', 'pageview');
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/04/研究-Node-js-和-Express-js-有感/">研究 Node.js 和 Express.js 有感</a>
+      <a class="article-title" href="/2015/11/04/%E7%A0%94%E7%A9%B6-Node-js-%E5%92%8C-Express-js-%E6%9C%89%E6%84%9F/">研究 Node.js 和 Express.js 有感</a>
     </h1>
   
 
@@ -100,17 +102,25 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">簡單來說網頁設計，就是設計ㄧ個讓在給了Key 後把相關資料轉換成網頁的 function。</span></div><div><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br></span></div><div><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">Node 提供ㄧ個可以用 JS 與其溝通的 non-blocking http server。Express 在上面提供了簡易建立 RESTFUL API、在頁面間 (在 server 上) 傳遞資料的方法。</span></div><div><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br></span></div><div><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">從外部來看，就是一個 JavaScript 程式，然後你對它送一些 Request，他就會吐 http response 回來。</span></div><div><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br></span></div><div><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">Http response 包含了資料 ( ex: 文章、作者、照片、標題、按鈕文字 ) 和 UI/排板 ( CSS / HTML / client-side JavaScript )。通常資料是不重複的。但根據不同的資料，UI 很多重複的地方就變成用 UI Template/UI 元件來表示。</span></div><div><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br></span></div><div><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">傳統產生網頁的方式是把資料和 UI 原件混成一個個各別的網頁然後傳給 Browser 畫出來；最近流行的方式是把資料和UI原件分別傳給 Browser，在 client-side browser 再用 JavaScript 把資料和 UI 原件組合成網頁。</span></div><div><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br></span></div><div><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">近年流行的 json 是一顆用 ( key:value or array ) pair建起來的關聯式資料樹。因此後端資料庫不再用關聯式資料庫，用簡單 NoSql 資料庫 ( 即 dictionary ) 就夠了。</span></div><div><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br></span></div><div><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">簡單來說現代的網頁開發就是開發一個程式：從後端抓一顆 json 資料樹，然後轉成前端美美的 DOM Tree。就是模組化的 Data Visualization，這樣想一切都輕鬆多了。</span></div><div><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br></span></div><div><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br></span></div><div><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">這樣的想法很自然的催生了一堆 UI 的程式庫，像是 Angular.js 和 react.js，然後還有 mobile上的 react native。</span></div>
+        <div><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">簡單來說網頁設計，就是設計ㄧ個讓在給了Key 後把相關資料轉換成網頁的 function。</span></div><div><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">
+</span></div><div><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">Node 提供ㄧ個可以用 JS 與其溝通的 non-blocking http server。Express 在上面提供了簡易建立 RESTFUL API、在頁面間 (在 server 上) 傳遞資料的方法。</span></div><div><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">
+</span></div><div><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">從外部來看，就是一個 JavaScript 程式，然後你對它送一些 Request，他就會吐 http response 回來。</span></div><div><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">
+</span></div><div><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">Http response 包含了資料 ( ex: 文章、作者、照片、標題、按鈕文字 ) 和 UI/排板 ( CSS / HTML / client-side JavaScript )。通常資料是不重複的。但根據不同的資料，UI 很多重複的地方就變成用 UI Template/UI 元件來表示。</span></div><div><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">
+</span></div><div><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">傳統產生網頁的方式是把資料和 UI 原件混成一個個各別的網頁然後傳給 Browser 畫出來；最近流行的方式是把資料和UI原件分別傳給 Browser，在 client-side browser 再用 JavaScript 把資料和 UI 原件組合成網頁。</span></div><div><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">
+</span></div><div><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">近年流行的 json 是一顆用 ( key:value or array ) pair建起來的關聯式資料樹。因此後端資料庫不再用關聯式資料庫，用簡單 NoSql 資料庫 ( 即 dictionary ) 就夠了。</span></div><div><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">
+</span></div><div><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">簡單來說現代的網頁開發就是開發一個程式：從後端抓一顆 json 資料樹，然後轉成前端美美的 DOM Tree。就是模組化的 Data Visualization，這樣想一切都輕鬆多了。</span></div><div><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">
+</span></div><div><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">
+</span></div><div><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">這樣的想法很自然的催生了一堆 UI 的程式庫，像是 Angular.js 和 react.js，然後還有 mobile上的 react native。</span></div>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wangchou.github.io/2015/11/04/研究-Node-js-和-Express-js-有感/" data-id="cjbofxlwy0017ca9kn0qd3u3p" class="article-share-link">分享</a>
+      <a data-url="http://wangchou.github.io/2015/11/04/%E7%A0%94%E7%A9%B6-Node-js-%E5%92%8C-Express-js-%E6%9C%89%E6%84%9F/" data-id="cldjvjau2001i8mz666d2fwqd" class="article-share-link">分享</a>
       
-        <a href="http://wangchou.github.io/2015/11/04/研究-Node-js-和-Express-js-有感/#disqus_thread" class="article-comment-link">留言</a>
+        <a href="http://wangchou.github.io/2015/11/04/%E7%A0%94%E7%A9%B6-Node-js-%E5%92%8C-Express-js-%E6%9C%89%E6%84%9F/#disqus_thread" class="article-comment-link">留言</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/backend/">backend</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node/">node</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/backend/" rel="tag">backend</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node/" rel="tag">node</a></li></ul>
 
     </footer>
   </div>
@@ -121,7 +131,7 @@ ga('send', 'pageview');
   
     <article id="post-Node-js-的發明人-Ryan-Dahl-在-Yahoo-介紹-Node-js-2010" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/11/03/Node-js-的發明人-Ryan-Dahl-在-Yahoo-介紹-Node-js-2010/" class="article-date">
+    <a href="/2015/11/03/Node-js-%E7%9A%84%E7%99%BC%E6%98%8E%E4%BA%BA-Ryan-Dahl-%E5%9C%A8-Yahoo-%E4%BB%8B%E7%B4%B9-Node-js-2010/" class="article-date">
   <time datetime="2015-11-03T15:04:00.000Z" itemprop="datePublished">2015-11-03</time>
 </a>
     
@@ -133,7 +143,7 @@ ga('send', 'pageview');
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/03/Node-js-的發明人-Ryan-Dahl-在-Yahoo-介紹-Node-js-2010/">Node.js 的發明人 Ryan Dahl 在 Yahoo 介紹 Node.js (2010)</a>
+      <a class="article-title" href="/2015/11/03/Node-js-%E7%9A%84%E7%99%BC%E6%98%8E%E4%BA%BA-Ryan-Dahl-%E5%9C%A8-Yahoo-%E4%BB%8B%E7%B4%B9-Node-js-2010/">Node.js 的發明人 Ryan Dahl 在 Yahoo 介紹 Node.js (2010)</a>
     </h1>
   
 
@@ -141,22 +151,93 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><div class="separator" style="clear: both; text-align: center;"><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><iframe allowfullscreen class="YOUTUBE-iframe-video" data-thumbnail-src="https://i.ytimg.com/vi/M-sc73Y-zQA/0.jpg" frameborder="0" height="266" src="https://www.youtube.com/embed/M-sc73Y-zQA?feature=player_embedded" width="320"></iframe></span></div><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br></span><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">Node.js主要專注在Performance。Node的特點是對I/O有特別的處理方式，特別快。</span><br><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br></span><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">在有100個client下，每次回應1MB的Benchmark</span><br><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">node &nbsp;822 reqs/secs</span><br><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">nginx 7xx reqs/secs</span><br><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">others &nbsp;1x reqs/secs</span><br><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br></span><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">node用javascript寫，但居然跑的比純C寫的nginx還要快!!! nginx快的原因是它不用一個Process來接處理一個 client，而是用Event Loop。</span><br><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br></span><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">All about non-blocking I/O</span><br><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br></span><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">non-blocking I/O: &nbsp; L1 / L2 / L3/Memory &lt; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 250 cycles</span><br><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">blocking I/O: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;disk / network &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &gt; 41,000,000 cycles (ex: select .. from database)</span><br><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br></span><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">應該用不同的方式來處理這兩種I/O，他們從根本上根本不一樣。L1 cache像是拉開抽屜拿東西，存取memory像是到樓下買個東西回來，但從硬碟上拿東西像是跳上飛機、飛到地球的另一邊再飛回來一樣。</span><br><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br></span><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">要用non-blocking I/O，就要全部的API Call都用non-blocking I/O，即時用了第三方的程式庫去存取資料庫，可能就變成blocking I/O了。要實現的方法有幾種，event loop、using callback function。</span><br><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br></span><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">database_query(“select …”, &nbsp;callback function); //應該這樣做</span><br><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br></span><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">但是大部份的語言都不預設這種寫程式的方式，如果要達成這種功能，通常要花很大的心力，最後大部份程式員最多就做到多個執行緒，然用用一個執行緒去處理一個I/O Operation。</span><br><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br></span><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">但Javascript是個特別的例外，因為這語言從第一天就一直在處理瀏覽器的Event Loop，<strong>callback function、anonymous function、Closure&nbsp;</strong>是在平常也不過的方法了。Javascript的文化就是Event Programming。</span><br><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br></span><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">Node.js 就是讓你單純只用Event、non-blocking的infrastructure來寫高度concurrent的程式。設計的目標是任何的function都不能直接存取I/O，一定要用callback的function來處理。其他特性還有專注在Low level、什麼都用串流、不強迫buffering、提供DNS/HTTP/TLS的內建支援。</span><br><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br></span><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">HTTP包含: Chunked encoding, Pipelined message, hanging message.</span><br><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br></span><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">Node的API要用client side JS Programmer熟悉的慣例，幾乎100% MIT/BSD Licensed。(唯一例外是openssl)</span><br><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br></span><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">架構</span><br><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br></span></p>
-<h2 id="Javascript-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-Node-standard-library"><a href="#Javascript-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-Node-standard-library" class="headerlink" title="Javascript &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Node standard library"></a>Javascript &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Node standard library</h2><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Node binding<br>C &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ————————————-<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;V8 &nbsp; Thread pool &amp; event pool</p>
+        <div class="separator" style="clear: both; text-align: center;"><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><iframe allowfullscreen="" class="YOUTUBE-iframe-video" data-thumbnail-src="https://i.ytimg.com/vi/M-sc73Y-zQA/0.jpg" frameborder="0" height="266" src="https://www.youtube.com/embed/M-sc73Y-zQA?feature=player_embedded" width="320"></iframe></span></div><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">
+</span><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">Node.js主要專注在Performance。Node的特點是對I/O有特別的處理方式，特別快。</span>
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">
+</span><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">在有100個client下，每次回應1MB的Benchmark</span>
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">node &nbsp;822 reqs/secs</span>
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">nginx 7xx reqs/secs</span>
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">others &nbsp;1x reqs/secs</span>
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">
+</span><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">node用javascript寫，但居然跑的比純C寫的nginx還要快!!! nginx快的原因是它不用一個Process來接處理一個 client，而是用Event Loop。</span>
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">
+</span><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">All about non-blocking I/O</span>
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">
+</span><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">non-blocking I/O: &nbsp; L1 / L2 / L3/Memory &lt; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 250 cycles</span>
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">blocking I/O: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;disk / network &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &gt; 41,000,000 cycles (ex: select .. from database)</span>
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">
+</span><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">應該用不同的方式來處理這兩種I/O，他們從根本上根本不一樣。L1 cache像是拉開抽屜拿東西，存取memory像是到樓下買個東西回來，但從硬碟上拿東西像是跳上飛機、飛到地球的另一邊再飛回來一樣。</span>
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">
+</span><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">要用non-blocking I/O，就要全部的API Call都用non-blocking I/O，即時用了第三方的程式庫去存取資料庫，可能就變成blocking I/O了。要實現的方法有幾種，event loop、using callback function。</span>
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">
+</span><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">database_query("select ...", &nbsp;callback function); //應該這樣做</span>
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">
+</span><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">但是大部份的語言都不預設這種寫程式的方式，如果要達成這種功能，通常要花很大的心力，最後大部份程式員最多就做到多個執行緒，然用用一個執行緒去處理一個I/O Operation。</span>
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">
+</span><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">但Javascript是個特別的例外，因為這語言從第一天就一直在處理瀏覽器的Event Loop，**callback function、anonymous function、Closure&nbsp;**是在平常也不過的方法了。Javascript的文化就是Event Programming。</span>
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">
+</span><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">Node.js 就是讓你單純只用Event、non-blocking的infrastructure來寫高度concurrent的程式。設計的目標是任何的function都不能直接存取I/O，一定要用callback的function來處理。其他特性還有專注在Low level、什麼都用串流、不強迫buffering、提供DNS/HTTP/TLS的內建支援。</span>
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">
+</span><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">HTTP包含: Chunked encoding, Pipelined message, hanging message.</span>
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">
+</span><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">Node的API要用client side JS Programmer熟悉的慣例，幾乎100% MIT/BSD Licensed。(唯一例外是openssl)</span>
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">
+</span><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">架構</span>
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">
+</span>
+Javascript &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Node standard library
+------------------------------------------------------------
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Node binding
+C &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -------------------------------------
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;V8 &nbsp; Thread pool &amp; event pool
+
 <p>努力把使用者關在non-blocking的環境，用C語言當作屏障… XD</p>
 <p><strong>Node execution stack : only one stack</strong></p>
-<h2 id="load-index-html-nbsp-nbsp"><a href="#load-index-html-nbsp-nbsp" class="headerlink" title="| load(index.html) &nbsp; &nbsp;|"></a>| load(index.html) &nbsp; &nbsp;|</h2><h2 id="http-parse-1-nbsp-nbsp-nbsp-nbsp-nbsp"><a href="#http-parse-1-nbsp-nbsp-nbsp-nbsp-nbsp" class="headerlink" title="| http_parse(1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|"></a>| http_parse(1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</h2><h2 id="socket-readable-1"><a href="#socket-readable-1" class="headerlink" title="| socket_readable(1) |"></a>| socket_readable(1) |</h2><h2 id="ev-loop-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp"><a href="#ev-loop-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp" class="headerlink" title="| ev_loop &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|"></a>| ev_loop &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</h2><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| |<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;V</p>
-<h2 id="file-loaded-nbsp-nbsp-nbsp-nbsp-nbsp"><a href="#file-loaded-nbsp-nbsp-nbsp-nbsp-nbsp" class="headerlink" title="| file_loaded() &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |"></a>| file_loaded() &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |</h2><h2 id="ev-loop-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-1"><a href="#ev-loop-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-1" class="headerlink" title="| ev_loop &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|"></a>| ev_loop &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</h2><p>然後是一大堆的小段程式範例。<br>包含web server和 file system的non-blocking I/O.<br>然後是2010年接下來的 Road Map。</p>
+<table>
+<thead>
+<tr>
+<th>load(index.html) &amp;nbsp; &amp;nbsp;</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>http_parse(1) &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</td>
+</tr>
+</tbody></table>
+<hr>
+<table>
+<thead>
+<tr>
+<th>socket_readable(1)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ev_loop &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</td>
+</tr>
+</tbody></table>
+<hr>
+<p>&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;| |<br>&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;V</p>
+<table>
+<thead>
+<tr>
+<th>file_loaded() &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ev_loop &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</td>
+</tr>
+</tbody></table>
+<hr>
+<p>然後是一大堆的小段程式範例。<br>包含web server和 file system的non-blocking I&#x2F;O.<br>然後是2010年接下來的 Road Map。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wangchou.github.io/2015/11/03/Node-js-的發明人-Ryan-Dahl-在-Yahoo-介紹-Node-js-2010/" data-id="cjbofxlv60005ca9kdtrhbi5s" class="article-share-link">分享</a>
+      <a data-url="http://wangchou.github.io/2015/11/03/Node-js-%E7%9A%84%E7%99%BC%E6%98%8E%E4%BA%BA-Ryan-Dahl-%E5%9C%A8-Yahoo-%E4%BB%8B%E7%B4%B9-Node-js-2010/" data-id="cldjvjatv00058mz67dv47tkq" class="article-share-link">分享</a>
       
-        <a href="http://wangchou.github.io/2015/11/03/Node-js-的發明人-Ryan-Dahl-在-Yahoo-介紹-Node-js-2010/#disqus_thread" class="article-comment-link">留言</a>
+        <a href="http://wangchou.github.io/2015/11/03/Node-js-%E7%9A%84%E7%99%BC%E6%98%8E%E4%BA%BA-Ryan-Dahl-%E5%9C%A8-Yahoo-%E4%BB%8B%E7%B4%B9-Node-js-2010/#disqus_thread" class="article-comment-link">留言</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node/">node</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node/" rel="tag">node</a></li></ul>
 
     </footer>
   </div>
@@ -169,7 +250,7 @@ ga('send', 'pageview');
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/3/">&laquo; 上一頁</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
+    <a class="extend prev" rel="prev" href="/page/3/">&amp;laquo; 上一頁</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
   </nav>
 
 </section>
@@ -180,7 +261,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">標籤雲</h3>
     <div class="widget tagcloud">
-      <a href="/tags/ACGN/" style="font-size: 12.5px;">ACGN</a> <a href="/tags/IA/" style="font-size: 15px;">IA</a> <a href="/tags/MobX/" style="font-size: 10px;">MobX</a> <a href="/tags/backend/" style="font-size: 12.5px;">backend</a> <a href="/tags/design/" style="font-size: 20px;">design</a> <a href="/tags/design-thinking/" style="font-size: 10px;">design thinking</a> <a href="/tags/empathy/" style="font-size: 10px;">empathy</a> <a href="/tags/facebook/" style="font-size: 10px;">facebook</a> <a href="/tags/firebase/" style="font-size: 12.5px;">firebase</a> <a href="/tags/flux/" style="font-size: 10px;">flux</a> <a href="/tags/framer/" style="font-size: 10px;">framer</a> <a href="/tags/frontend/" style="font-size: 10px;">frontend</a> <a href="/tags/functional-programming/" style="font-size: 20px;">functional programming</a> <a href="/tags/hackathon/" style="font-size: 10px;">hackathon</a> <a href="/tags/javascript/" style="font-size: 17.5px;">javascript</a> <a href="/tags/node/" style="font-size: 12.5px;">node</a> <a href="/tags/oop/" style="font-size: 10px;">oop</a> <a href="/tags/prototyping/" style="font-size: 10px;">prototyping</a> <a href="/tags/psychology/" style="font-size: 10px;">psychology</a> <a href="/tags/pure-function/" style="font-size: 10px;">pure function</a> <a href="/tags/react/" style="font-size: 20px;">react</a> <a href="/tags/redux/" style="font-size: 17.5px;">redux</a> <a href="/tags/ui/" style="font-size: 10px;">ui</a> <a href="/tags/user-story-mapping/" style="font-size: 10px;">user story mapping</a> <a href="/tags/ux/" style="font-size: 15px;">ux</a> <a href="/tags/劇本/" style="font-size: 10px;">劇本</a> <a href="/tags/生產力/" style="font-size: 10px;">生產力</a> <a href="/tags/社會學/" style="font-size: 10px;">社會學</a> <a href="/tags/老子/" style="font-size: 10px;">老子</a> <a href="/tags/資訊架構/" style="font-size: 10px;">資訊架構</a>
+      <a href="/tags/ACGN/" style="font-size: 12.5px;">ACGN</a> <a href="/tags/IA/" style="font-size: 15px;">IA</a> <a href="/tags/MobX/" style="font-size: 10px;">MobX</a> <a href="/tags/backend/" style="font-size: 12.5px;">backend</a> <a href="/tags/design/" style="font-size: 20px;">design</a> <a href="/tags/design-thinking/" style="font-size: 10px;">design thinking</a> <a href="/tags/empathy/" style="font-size: 10px;">empathy</a> <a href="/tags/facebook/" style="font-size: 10px;">facebook</a> <a href="/tags/firebase/" style="font-size: 12.5px;">firebase</a> <a href="/tags/flux/" style="font-size: 10px;">flux</a> <a href="/tags/framer/" style="font-size: 10px;">framer</a> <a href="/tags/frontend/" style="font-size: 10px;">frontend</a> <a href="/tags/functional-programming/" style="font-size: 20px;">functional programming</a> <a href="/tags/hackathon/" style="font-size: 10px;">hackathon</a> <a href="/tags/javascript/" style="font-size: 17.5px;">javascript</a> <a href="/tags/node/" style="font-size: 12.5px;">node</a> <a href="/tags/oop/" style="font-size: 10px;">oop</a> <a href="/tags/prototyping/" style="font-size: 10px;">prototyping</a> <a href="/tags/psychology/" style="font-size: 10px;">psychology</a> <a href="/tags/pure-function/" style="font-size: 10px;">pure function</a> <a href="/tags/react/" style="font-size: 20px;">react</a> <a href="/tags/redux/" style="font-size: 17.5px;">redux</a> <a href="/tags/ui/" style="font-size: 10px;">ui</a> <a href="/tags/user-story-mapping/" style="font-size: 10px;">user story mapping</a> <a href="/tags/ux/" style="font-size: 15px;">ux</a> <a href="/tags/%E5%8A%87%E6%9C%AC/" style="font-size: 10px;">劇本</a> <a href="/tags/%E7%94%9F%E7%94%A2%E5%8A%9B/" style="font-size: 10px;">生產力</a> <a href="/tags/%E7%A4%BE%E6%9C%83%E5%AD%B8/" style="font-size: 10px;">社會學</a> <a href="/tags/%E8%80%81%E5%AD%90/" style="font-size: 10px;">老子</a> <a href="/tags/%E8%B3%87%E8%A8%8A%E6%9E%B6%E6%A7%8B/" style="font-size: 10px;">資訊架構</a>
     </div>
   </div>
 
@@ -192,7 +273,7 @@ ga('send', 'pageview');
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2018 kindalu<br>
+      &copy; 2023 kindalu<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
@@ -204,7 +285,7 @@ ga('send', 'pageview');
   
     <a href="/archives" class="mobile-nav-link">所有文章</a>
   
-    <a href="https://github.com/wangchou" class="mobile-nav-link">Github</a>
+    <a target="_blank" rel="noopener" href="https://github.com/wangchou" class="mobile-nav-link">Github</a>
   
 </nav>
     
@@ -224,11 +305,17 @@ ga('send', 'pageview');
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
 
 
 <script src="/js/script.js"></script>
+
 
 
 

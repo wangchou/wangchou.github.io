@@ -1,36 +1,177 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+
+    <url>
+        <loc>http://wangchou.github.io/tags/%E8%B3%87%E8%A8%8A%E6%9E%B6%E6%A7%8B/</loc>
+        <lastmod>2018-03-07T03:38:15.417Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://wangchou.github.io/tags/%E5%8A%87%E6%9C%AC/</loc>
+        <lastmod>2018-03-07T03:38:15.417Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://wangchou.github.io/tags/ACGN/</loc>
+        <lastmod>2017-12-28T11:08:38.162Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://wangchou.github.io/tags/%E7%94%9F%E7%94%A2%E5%8A%9B/</loc>
+        <lastmod>2017-12-28T11:08:14.340Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://wangchou.github.io/tags/IA/</loc>
+        <lastmod>2017-12-27T02:55:38.603Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://wangchou.github.io/tags/ux/</loc>
+        <lastmod>2017-12-27T02:53:59.680Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://wangchou.github.io/tags/%E7%A4%BE%E6%9C%83%E5%AD%B8/</loc>
+        <lastmod>2017-12-27T02:53:45.290Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://wangchou.github.io/tags/%E8%80%81%E5%AD%90/</loc>
+        <lastmod>2017-12-27T02:53:35.906Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://wangchou.github.io/tags/node/</loc>
+        <lastmod>2017-12-27T02:53:23.029Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://wangchou.github.io/tags/backend/</loc>
+        <lastmod>2017-12-27T02:53:23.029Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://wangchou.github.io/tags/redux/</loc>
+        <lastmod>2017-12-27T02:53:17.183Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://wangchou.github.io/tags/design-thinking/</loc>
+        <lastmod>2017-12-27T02:53:06.373Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://wangchou.github.io/tags/design/</loc>
+        <lastmod>2017-12-27T02:53:06.373Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://wangchou.github.io/tags/psychology/</loc>
+        <lastmod>2017-12-27T02:52:59.767Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://wangchou.github.io/tags/pure-function/</loc>
+        <lastmod>2017-12-27T02:52:32.905Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://wangchou.github.io/tags/functional-programming/</loc>
+        <lastmod>2017-12-27T02:52:32.905Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://wangchou.github.io/tags/user-story-mapping/</loc>
+        <lastmod>2017-12-27T02:52:21.834Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://wangchou.github.io/tags/MobX/</loc>
+        <lastmod>2017-12-27T02:51:36.354Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://wangchou.github.io/tags/firebase/</loc>
+        <lastmod>2017-12-27T02:51:36.354Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://wangchou.github.io/tags/react/</loc>
+        <lastmod>2017-12-27T02:51:30.491Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://wangchou.github.io/tags/flux/</loc>
+        <lastmod>2017-12-27T02:51:24.517Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://wangchou.github.io/tags/javascript/</loc>
+        <lastmod>2017-12-27T02:51:24.517Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://wangchou.github.io/tags/frontend/</loc>
+        <lastmod>2017-12-27T02:50:17.543Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
     <url>
         <loc>http://wangchou.github.io/tags/facebook/</loc>
-        <lastmod>2017-12-23T06:08:08.299Z</lastmod>
+        <lastmod>2017-12-23T06:08:08.300Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://wangchou.github.io/tags/framer/</loc>
-        <lastmod>2017-12-23T06:08:08.299Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://wangchou.github.io/tags/prototyping/</loc>
-        <lastmod>2017-12-23T06:08:08.299Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://wangchou.github.io/tags/ui/</loc>
-        <lastmod>2017-12-23T06:08:08.299Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://wangchou.github.io/tags/empathy/</loc>
+        <loc>http://wangchou.github.io/tags/oop/</loc>
         <lastmod>2017-12-23T06:08:08.299Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -44,169 +185,29 @@
     </url>
 
     <url>
-        <loc>http://wangchou.github.io/tags/oop/</loc>
+        <loc>http://wangchou.github.io/tags/empathy/</loc>
         <lastmod>2017-12-23T06:08:08.299Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://wangchou.github.io/tags/frontend/</loc>
-        <lastmod>2017-12-27T02:50:17.543Z</lastmod>
+        <loc>http://wangchou.github.io/tags/ui/</loc>
+        <lastmod>2017-12-23T06:08:08.299Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://wangchou.github.io/tags/flux/</loc>
-        <lastmod>2017-12-27T02:51:24.516Z</lastmod>
+        <loc>http://wangchou.github.io/tags/prototyping/</loc>
+        <lastmod>2017-12-23T06:08:08.299Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://wangchou.github.io/tags/javascript/</loc>
-        <lastmod>2017-12-27T02:51:24.516Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://wangchou.github.io/tags/react/</loc>
-        <lastmod>2017-12-27T02:51:30.491Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://wangchou.github.io/tags/firebase/</loc>
-        <lastmod>2017-12-27T02:51:36.353Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://wangchou.github.io/tags/MobX/</loc>
-        <lastmod>2017-12-27T02:51:36.353Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://wangchou.github.io/tags/user-story-mapping/</loc>
-        <lastmod>2017-12-27T02:52:21.833Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://wangchou.github.io/tags/functional-programming/</loc>
-        <lastmod>2017-12-27T02:52:32.904Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://wangchou.github.io/tags/pure-function/</loc>
-        <lastmod>2017-12-27T02:52:32.904Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://wangchou.github.io/tags/psychology/</loc>
-        <lastmod>2017-12-27T02:52:59.766Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://wangchou.github.io/tags/design/</loc>
-        <lastmod>2017-12-27T02:53:06.372Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://wangchou.github.io/tags/design-thinking/</loc>
-        <lastmod>2017-12-27T02:53:06.372Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://wangchou.github.io/tags/redux/</loc>
-        <lastmod>2017-12-27T02:53:17.182Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://wangchou.github.io/tags/backend/</loc>
-        <lastmod>2017-12-27T02:53:23.029Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://wangchou.github.io/tags/node/</loc>
-        <lastmod>2017-12-27T02:53:23.029Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://wangchou.github.io/tags/%E8%80%81%E5%AD%90/</loc>
-        <lastmod>2017-12-27T02:53:35.905Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://wangchou.github.io/tags/%E7%A4%BE%E6%9C%83%E5%AD%B8/</loc>
-        <lastmod>2017-12-27T02:53:45.289Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://wangchou.github.io/tags/ux/</loc>
-        <lastmod>2017-12-27T02:53:59.679Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://wangchou.github.io/tags/IA/</loc>
-        <lastmod>2017-12-27T02:55:38.602Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://wangchou.github.io/tags/%E7%94%9F%E7%94%A2%E5%8A%9B/</loc>
-        <lastmod>2017-12-28T11:08:14.340Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://wangchou.github.io/tags/ACGN/</loc>
-        <lastmod>2017-12-28T11:08:38.161Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://wangchou.github.io/tags/%E5%8A%87%E6%9C%AC/</loc>
-        <lastmod>2018-03-07T03:38:15.417Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://wangchou.github.io/tags/%E8%B3%87%E8%A8%8A%E6%9E%B6%E6%A7%8B/</loc>
-        <lastmod>2018-03-07T03:38:15.417Z</lastmod>
+        <loc>http://wangchou.github.io/tags/framer/</loc>
+        <lastmod>2017-12-23T06:08:08.299Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

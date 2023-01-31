@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
     <url>
-        <loc>http://wangchou.github.io</loc>
+        <loc>http://wangchou.github.io/</loc>
         <changefreq>daily</changefreq>
         <priority>1</priority>
     </url>
+
 
     <url>
         <loc>http://wangchou.github.io/2018/03/07/%E7%BE%8E%E5%8A%87%E5%8A%87%E6%9C%AC%E7%B5%90%E6%A7%8B/</loc>
@@ -16,7 +18,7 @@
 
     <url>
         <loc>http://wangchou.github.io/2017/12/26/%E6%96%B0%E6%B5%B7%E8%AA%A0%E5%B1%95-%E5%8D%81%E4%BA%94%E5%B9%B4%E5%8B%95%E7%95%AB%E6%AD%B7%E7%A8%8B/</loc>
-        <lastmod>2017-12-28T11:08:38.161Z</lastmod>
+        <lastmod>2017-12-28T11:08:38.162Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -32,7 +34,7 @@
 
     <url>
         <loc>http://wangchou.github.io/2016/03/04/%E5%A6%82%E4%BD%95%E8%AE%93%E7%A8%8B%E5%BC%8F%E5%8F%AF%E7%B6%AD%E8%AD%B7-%E9%87%8D%E6%A7%8B%E7%9A%84%E6%96%B9%E5%90%91-%E7%A8%8B%E5%BC%8F%E9%96%8B%E7%99%BC%E4%B8%AD%E7%9A%84%E4%BA%92%E5%8B%95%E8%A8%AD%E8%A8%88/</loc>
-        <lastmod>2017-12-27T02:55:38.602Z</lastmod>
+        <lastmod>2017-12-27T02:55:38.603Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -40,7 +42,7 @@
 
     <url>
         <loc>http://wangchou.github.io/2016/04/29/%E8%B3%87%E8%A8%8A%E6%9E%B6%E6%A7%8B%E5%AD%B8%E6%98%AF%E4%BB%80%E9%BA%BC%EF%BC%9F/</loc>
-        <lastmod>2017-12-27T02:53:59.679Z</lastmod>
+        <lastmod>2017-12-27T02:53:59.680Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -48,7 +50,7 @@
 
     <url>
         <loc>http://wangchou.github.io/2016/07/23/%E8%A6%8B%E6%A8%B9%E5%8F%88%E8%A6%8B%E6%9E%97-%E6%9B%B8%E6%91%98-%E5%BF%83%E5%BE%97/</loc>
-        <lastmod>2017-12-27T02:53:45.289Z</lastmod>
+        <lastmod>2017-12-27T02:53:45.290Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -56,7 +58,7 @@
 
     <url>
         <loc>http://wangchou.github.io/2015/11/28/%E8%81%8A%E9%A0%90%E6%B8%AC%E8%87%AA%E5%B7%B1%E6%9C%AA%E4%BE%86%E7%9A%84%E8%83%BD%E5%8A%9B/</loc>
-        <lastmod>2017-12-27T02:53:35.905Z</lastmod>
+        <lastmod>2017-12-27T02:53:35.906Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -72,7 +74,7 @@
 
     <url>
         <loc>http://wangchou.github.io/2015/11/06/%E7%94%A8-Redux-%E5%AF%A6%E8%B8%90%E3%80%8C%E7%8B%80%E6%85%8B%E6%A9%9F%E5%B0%8E%E5%90%91%E7%9A%84%E4%BB%8B%E9%9D%A2%E9%96%8B%E7%99%BC%E3%80%8D/</loc>
-        <lastmod>2017-12-27T02:53:17.182Z</lastmod>
+        <lastmod>2017-12-27T02:53:17.183Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -80,7 +82,7 @@
 
     <url>
         <loc>http://wangchou.github.io/2016/02/08/%E5%BE%9E%E8%B2%B7%E8%98%8B%E6%9E%9C%E7%9C%8B%E5%B7%A5%E7%A8%8B%E5%B8%AB%E5%92%8C%E8%A8%AD%E8%A8%88%E5%B8%AB%E7%9A%84%E5%B7%AE%E5%88%A5%EF%BC%9F/</loc>
-        <lastmod>2017-12-27T02:53:06.372Z</lastmod>
+        <lastmod>2017-12-27T02:53:06.373Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -88,7 +90,7 @@
 
     <url>
         <loc>http://wangchou.github.io/2016/06/01/%E5%A4%A7%E8%85%A6%E8%B6%85%E8%BC%89%E6%99%82%E4%BB%A3%E7%9A%84%E6%80%9D%E8%80%83%E5%AD%B8-The-Organized-Mind-Thinking-Straight-in-the-Age-of-Information-Overload/</loc>
-        <lastmod>2017-12-27T02:52:59.766Z</lastmod>
+        <lastmod>2017-12-27T02:52:59.767Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -96,7 +98,7 @@
 
     <url>
         <loc>http://wangchou.github.io/2015/11/09/%E5%87%BD%E6%95%B8%E5%BC%8F%E7%B7%A8%E7%A8%8B%E4%BB%8B%E7%B4%B9-1-2/</loc>
-        <lastmod>2017-12-27T02:52:32.904Z</lastmod>
+        <lastmod>2017-12-27T02:52:32.905Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -104,7 +106,7 @@
 
     <url>
         <loc>http://wangchou.github.io/2016/05/28/%E4%BD%BF%E7%94%A8%E8%80%85%E6%95%85%E4%BA%8B%E5%B0%8D%E7%85%A7-%E5%9C%B0%E5%9C%96%E6%BC%94%E8%AC%9B%E6%91%98%E8%A6%81-User-Story-Mapping/</loc>
-        <lastmod>2017-12-27T02:52:21.833Z</lastmod>
+        <lastmod>2017-12-27T02:52:21.834Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -120,7 +122,7 @@
 
     <url>
         <loc>http://wangchou.github.io/2016/11/06/Redux-%E7%B0%A1%E4%BB%8B%EF%BC%9A%E6%88%91%E7%B5%82%E6%96%BC%E7%9C%8B%E7%A9%BF%E5%AE%83%E4%BA%86/</loc>
-        <lastmod>2017-12-27T02:51:36.353Z</lastmod>
+        <lastmod>2017-12-27T02:51:36.354Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -136,7 +138,7 @@
 
     <url>
         <loc>http://wangchou.github.io/2015/11/05/React-%E5%92%8C-Flux-%E5%88%B0%E5%BA%95%E5%9C%A8%E5%81%9A%E4%BB%80%E9%BA%BC/</loc>
-        <lastmod>2017-12-27T02:51:24.516Z</lastmod>
+        <lastmod>2017-12-27T02:51:24.517Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -144,7 +146,7 @@
 
     <url>
         <loc>http://wangchou.github.io/2015/12/02/React-UI-%E5%BF%83%E5%BE%97%E6%96%87%E4%B9%8B%E4%B8%80/</loc>
-        <lastmod>2017-12-27T02:51:17.264Z</lastmod>
+        <lastmod>2017-12-27T02:51:17.265Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -160,7 +162,7 @@
 
     <url>
         <loc>http://wangchou.github.io/2015/11/08/Javascript-%E4%B8%AD%E7%9A%84%E5%87%BD%E6%95%B8%E5%BC%8F%E7%B7%A8%E7%A8%8B-a-talk-ReactiveConf-2015/</loc>
-        <lastmod>2017-12-27T02:51:03.275Z</lastmod>
+        <lastmod>2017-12-27T02:51:03.276Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -168,7 +170,7 @@
 
     <url>
         <loc>http://wangchou.github.io/2015/11/04/Be-predictable-not-correct-by-Pete-Hunt-from-Instagram/</loc>
-        <lastmod>2017-12-27T02:50:43.521Z</lastmod>
+        <lastmod>2017-12-27T02:50:43.522Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -192,7 +194,7 @@
 
     <url>
         <loc>http://wangchou.github.io/2016/01/29/%E6%B7%BA%E8%AB%87%E5%87%BD%E6%95%B8%E5%BC%8F%E7%B7%A8%E7%A8%8B%E5%92%8C-React/</loc>
-        <lastmod>2017-12-25T02:19:53.077Z</lastmod>
+        <lastmod>2017-12-25T02:19:53.078Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -200,6 +202,22 @@
 
     <url>
         <loc>http://wangchou.github.io/2015/11/05/%E4%BB%8B%E7%B4%B9-React-js-2013-by-Facebook/</loc>
+        <lastmod>2017-12-23T06:08:08.300Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://wangchou.github.io/2015/11/07/%E8%A8%93%E7%B7%B4%E8%8B%B1%E6%96%87%E7%9A%84%E9%96%B1%E8%AE%80%E8%83%BD%E5%8A%9B/</loc>
+        <lastmod>2017-12-23T06:08:08.300Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://wangchou.github.io/2016/01/01/%E4%BB%80%E9%BA%BC%E6%98%AF%E8%A8%AD%E8%A8%88%EF%BC%9F/</loc>
         <lastmod>2017-12-23T06:08:08.299Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -223,7 +241,7 @@
     </url>
 
     <url>
-        <loc>http://wangchou.github.io/2015/12/20/%E5%8F%B0%E5%A4%A7%E4%B8%8D%E4%B8%80%E6%A8%A3%E6%80%9D%E8%80%83%E7%A4%BE%EF%BC%9A%E8%A8%AD%E8%A8%88%E6%80%9D%E8%80%83%E5%B7%A5%E4%BD%9C%E5%9D%8A-Day-1/</loc>
+        <loc>http://wangchou.github.io/2015/12/20/%E5%8F%B0%E5%A4%A7%E4%B8%8D%E4%B8%80%E6%A8%A3%E6%80%9D%E8%80%83%E7%A4%BE%EF%BC%9A%E8%A8%AD%E8%A8%88%E6%80%9D%E8%80%83%E5%B7%A5%E4%BD%9C%E5%9D%8A-Day-2/</loc>
         <lastmod>2017-12-23T06:08:08.299Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -231,7 +249,7 @@
     </url>
 
     <url>
-        <loc>http://wangchou.github.io/2015/12/20/%E5%8F%B0%E5%A4%A7%E4%B8%8D%E4%B8%80%E6%A8%A3%E6%80%9D%E8%80%83%E7%A4%BE%EF%BC%9A%E8%A8%AD%E8%A8%88%E6%80%9D%E8%80%83%E5%B7%A5%E4%BD%9C%E5%9D%8A-Day-2/</loc>
+        <loc>http://wangchou.github.io/2015/12/20/%E5%8F%B0%E5%A4%A7%E4%B8%8D%E4%B8%80%E6%A8%A3%E6%80%9D%E8%80%83%E7%A4%BE%EF%BC%9A%E8%A8%AD%E8%A8%88%E6%80%9D%E8%80%83%E5%B7%A5%E4%BD%9C%E5%9D%8A-Day-1/</loc>
         <lastmod>2017-12-23T06:08:08.299Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -241,22 +259,6 @@
     <url>
         <loc>http://wangchou.github.io/2015/11/21/%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88%E6%B3%95%E8%88%87%E4%BA%BA%E7%94%9F-Programming-Paradigm-and-Life/</loc>
         <lastmod>2017-12-23T06:08:08.299Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://wangchou.github.io/2015/11/07/%E8%A8%93%E7%B7%B4%E8%8B%B1%E6%96%87%E7%9A%84%E9%96%B1%E8%AE%80%E8%83%BD%E5%8A%9B/</loc>
-        <lastmod>2017-12-23T06:08:08.299Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://wangchou.github.io/2016/01/01/%E4%BB%80%E9%BA%BC%E6%98%AF%E8%A8%AD%E8%A8%88%EF%BC%9F/</loc>
-        <lastmod>2017-12-23T06:08:08.298Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
